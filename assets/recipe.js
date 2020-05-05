@@ -22,7 +22,12 @@ $(".ingredBtn").on("click", function(event) {
     
     $.ajax(settings).done(function (response) {
         var results = JSON.parse(response);
-        console.log(results);
+        for (i = 0; i < results.results.length; i++ ) {
+        var newP = $("<p>");
+        var link = $("<a>");
+        var newRecp = results.results[i].href
+        link.attr("href", newRecp)
+        $(".recipes").append(link);
         }
     });
 
