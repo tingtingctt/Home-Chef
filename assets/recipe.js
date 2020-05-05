@@ -67,3 +67,15 @@ $(".mealBtn").on("click", function(event) {
 
 
 });
+
+$("#saveBtn").on("click", function(event) {
+    event.preventDefault();
+    console.log("hi")
+    var newDay = $("#daySelector").val();
+    var newMeal = $("#mealSelector").val();
+    var newChef = $("#chefSelector").val();
+
+    console.log(newDay + newMeal + newChef);
+
+
+});
