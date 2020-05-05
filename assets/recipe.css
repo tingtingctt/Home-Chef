@@ -1,0 +1,22 @@
+
+
+h1 {
+
+    background-color: pink;
+    height: 100px;
+    text-align: center;
+}
+
+h5, h2 {
+    text-align: center;
+}
+
+.container {
+
+    background-color: pink;
+}
+
+.inputGroup {
+    padding-top:50px;
+}
+

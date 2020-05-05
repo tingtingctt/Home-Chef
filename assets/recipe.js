@@ -23,6 +23,7 @@ $(".ingredBtn").on("click", function(event) {
     
     $.ajax(settings).done(function (response) {
         var results = JSON.parse(response);
+        console.log(results);
         for (i = 0; i < results.results.length; i++ ) {
         var newP = $("<p>");
         var link = $("<a>");
@@ -31,7 +32,7 @@ $(".ingredBtn").on("click", function(event) {
         link.attr("target", "_blank")
         link.text(newRecp);
         newP.html(link);
-        $(".recipes").append(newP);
+        $(".recipes").prepend(newP);
         }
     });
 
@@ -70,7 +71,7 @@ $(".mealBtn").on("click", function(event) {
             link.attr("target", "_blank")
             link.text(newRecp);
             newP.html(link);
-            $(".recipes").append(newP);
+            $(".recipes").prepend(newP);
         }
     });
 
@@ -137,4 +138,5 @@ $("#saveBtn").on("click", function(event) {
 
 
 });
+
 

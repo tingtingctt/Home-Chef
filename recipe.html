@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    
-    
+    <link rel="stylesheet" type="text/css" href="assets/recipe.css" />
 </head>
 
 
@@ -23,41 +22,44 @@
         <div class="row">
             <div class="col-12">
                 <h1>ADD A NEW RECIPE:</h1>
+                <h2>Here's how it works.</h2>
+                <h5>Check your pantry, check your fridge. If you have an ingredient you want to use input it into the INGREDIENT form below. It's important to use singular, not plural!</h5>
+                <h5>Already know what meal you want? Meatloaf, spaghetti, etc. etc.? Input that into MEAL!</h5>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-4">
+        <div class="row inputGroup">
+            <div class="col-5">
                 <form>
                     <div class="form-group">
-                        <label for="inputIngredient">What ingredients do you want to use to find a recipe? Put them here!</label>
+                        <label for="inputIngredient">INGREDIENT</label>
                         <input type="text" class="inputIngredient">
                         <button type = "submit" class="btn btn-primary ingredBtn">Find recipes!</button>
                     </div>
                 </form>
                 <form>
                     <div class="form-group">
-                        <label for="inputMeal">What meal do you want to find a recipe for? Put it here!</label>
+                        <label for="inputMeal">MEAL&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
                         <input type="text" class = "inputMeal">
                         <button type = "submit" class="btn btn-primary mealBtn">Find recipes!</button>
                     </div>
                 </form>
-            </div>
-            <div class="col-8 recipes">
-                <h3>Pick a recipe!</h3>
-                    
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
+                </br>
+                </br>
+                </br>
                 <form>
                     <label for="recipe URL">Put your chosen recipe URL here:</label>
                     <input type="text" class="inputURL">
                     <button type = "submit" class = "btn btn-primary urlBtn" data-toggle="modal" data-target ="optionsModal">Submit</button>
                 </form>
             </div>
+            <div class="col-7 recipes">
+                <h3>Pick a recipe!</h3>
+                    
+            </div>
         </div>
+
+
 
         
         <div class="row">
@@ -68,7 +70,7 @@
                 </button>
   
   
-                <div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="optionsModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
