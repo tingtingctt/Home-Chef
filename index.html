@@ -11,7 +11,7 @@
    </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url(https://files.123freevectors.com/wp-content/original/110440-black-and-blue-blurred-background-vector.jpg);" id="navigation">
+    <nav class="navbar navbar-expand-lg" id="navigation">
         <!-- <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -29,8 +29,9 @@
       </nav>
       <br>
 
+  <div class="container" style="margin-top: 45px;">
       <!-- DropDown buttons -->
-      
+    <article class="beige padding25">  
       <div class="row">
         <div class="dropdown1">
           <button id="monday">Monday</button>
@@ -94,13 +95,73 @@
             <li><a href="#">Dinner</a></li>
           </ul>
         </div>
-
-
-
-
-
       </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            <h2 id="dateEl">Tuesday Lunch</h2>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5"> 
+        <h3 id="dishName"></h3>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <h3>Chef: &nbsp;<span id="chefName"></span></h3>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5" id="images"> </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3" id="chefImg">
+        <img src="assets/TT Images/chef.png" style="height:200px">
+        <div style="position: relative">
+          <img src="assets/TT Images/ratatouille carrot.png" alt="ratatouille" id="rat" style="position:fixed; bottom:50px; left: 30px;height: 100px">
+          <div id="tomato" class="confetti" style="position: fixed; height: 60px; width: 60px; top: 80px; left: 30px;">
+            <img class="d-block w-100" src="assets/TT Images/tomato.png">
+          </div>
+          <div id="lettuce" class="confetti" style="position: fixed; height: 60px; width: 60px; top: 80px; right: 30px;">
+            <img class="d-block w-100" src="assets/TT Images/lettuce.png">
+          </div>
+          <div id="eggplant" class="confetti" style="position: fixed; height: 60px; width: 60px; bottom: 20px; left: 30px;">
+            <img class="d-block w-100" src="assets/TT Images/eggplant.png">
+          </div>
+          <div id="banana" class="confetti" style="position: fixed; height: 60px; width: 60px; bottom: 20px; right: 30px;">
+            <img class="d-block w-100" src="assets/TT Images/banana.png">
+          </div>
+          <div id="milk" class="confetti" style="position: fixed; height: 60px; width: 60px; top: 80px; right: 50%;">
+            <img class="d-block w-100" src="assets/TT Images/milk.png">
+          </div>
+          <div id="wine" class="confetti" style="position: fixed; height: 60px; width: 60px; top: 50%; right: 30px;">
+            <img class="d-block w-100" src="assets/TT Images/wine.png">
+          </div>
+          <div id="squid" class="confetti" style="position: fixed; height: 60px; width: 60px; top: 50%; left: 30px;">
+            <img class="d-block w-100" src="assets/TT Images/squid.png">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <br>
+    <hr>
+    
+    <div class="row" style="height: 200px">
+
+    </div>
+
+    </article>
+  </div>
       <!-- Script section -->
-      <script src="script.js"></script>
+      <script src="TTscript.js"></script>
 </body>
 </html>

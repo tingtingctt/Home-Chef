@@ -1,4 +1,42 @@
 
+/*---------- TT's CSS Section in progress --------------*/
+body{
+    /* background-color: rgb(241, 86, 59,1); */
+    /* background-color: rgb(63, 12, 3); */
+    /* background-color: rgb(127, 214, 55); */
+    /* background-color: rgb(229, 241, 59, 1); */
+    /* background-color: rgb(59, 183, 241, 1); */
+    /* background-color: rgb(81, 6, 124); */
+    background-color: rgb(252, 252, 252, 1);
+    /* background-image: url("assets/TT Images/color grid 3.png"); */
+    /* background-color: rgb(31, 32, 32, 1); */
+    background-size: cover;
+}
+
+.navbar{
+    background-color:hsla(110, 100%, 32%, 1);
+}
+/* url(https://files.123freevectors.com/wp-content/original/110440-black-and-blue-blurred-background-vector.jpg) */
+
+.beige{
+    background-color: hsla(60, 20%, 99%, 0.9);
+    border-radius: 10px;
+}
+
+.padding25{
+    padding:25px;
+}
+
+hr{
+    border-width: 2px;
+    border-color:  hsla(360, 100%, 32%, 1);
+    margin-top: 10px;
+}
+
+/*---------- End of TT's CSS Section  --------------*/
+
+
+/*---------- Olex's CSS Section in progress --------------*/
 .dropdown {
     position: absolute;
 
@@ -14,7 +52,7 @@
 button {
     /* position: relative; */
     width: 180px;
-    background-color: #2196f3;
+    background-color:  hsla(360, 100%, 32%, 1);
     border: none;
     box-shadow: none;
     outline: none;
@@ -80,9 +118,11 @@ ul li a:hover {
 }
 
 h4 {
-    color: blueviolet;
+    color: hsla(60, 20%, 99%, 0.9);
 }
 
 h4:hover{
     color: coral;
 }
+
+/*---------- End of Olex's CSS Section --------------*/
