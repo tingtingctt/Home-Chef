@@ -123,15 +123,18 @@ $(".urlBtn").on("click", function(event) {
 
 $("#saveBtn").on("click", function(event) {
     event.preventDefault();
-    console.log("hi")
     var newDay = $("#daySelector").val();
     var newMeal = $("#mealSelector").val();
     var newChef = $("#chefSelector").val();
 
-    console.log(newDay + newMeal + newChef);
-
 
     $("#saveBtn").attr("data-dismiss", "modal")
+
+    localStorage.setItem("Day for Recipe", newDay)
+    localStorage.setItem("Meal for Recipe", newMeal)
+    localStorage.setItem("Chef for Recipe", newChef)
+
+
 
 });
 
