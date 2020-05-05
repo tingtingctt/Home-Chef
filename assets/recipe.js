@@ -67,3 +67,41 @@ $(".mealBtn").on("click", function(event) {
 
 
 });
+
+$("#saveBtn").on("click", function(event) {
+    event.preventDefault();
+    console.log("hi")
+    var newDay = $("#daySelector").val();
+    var newMeal = $("#mealSelector").val();
+    var newChef = $("#chefSelector").val();
+
+    console.log(newDay + newMeal + newChef);
+
+
+});
+
+$(".urlBtn").on("click", function(event) {
+    event.preventDefault();
+    var submittedURL = $(".inputURL").val()
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://mycookbook-io1.p.rapidapi.com/recipes/rapidapi",
+        "method": "POST",
+        "headers": {
+            "x-rapidapi-host": "mycookbook-io1.p.rapidapi.com",
+            "x-rapidapi-key": "c12fbcd6b6mshb18e26a60bb432cp1f2c4fjsn82a51563e64c",
+            "content-type": "text/plain",
+            "accept": "text/plain"
+        },
+        "data": submittedURL
+    }
+    
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+
+
+
+});
