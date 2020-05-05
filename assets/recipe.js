@@ -98,6 +98,17 @@ $(".urlBtn").on("click", function(event) {
     
     $.ajax(settings).done(function (response) {
         console.log(response);
+        console.log(response[0].name);
+        console.log(response[0].ingredients);
+        console.log(response[0].instructions);
+
+        var recipeTitle = response[0].name
+        var recipeIngredients = response[0].ingredients
+        var recipeInstructions = JSON.stringify(response[0].instructions)
+
+        localStorage.setItem("Recipe Title", recipeTitle)
+        localStorage.setItem("Recipe Ingredients", recipeIngredients)
+        localStorage.setItem("Recipe Instructions", recipeInstructions)
     });
 
 
