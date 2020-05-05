@@ -3,11 +3,12 @@
 $(".ingredBtn").on("click", function(event) {
 
     event.preventDefault();
-    $(".recipes").empty();
+    
 
     var ingredientInput = $(".inputIngredient").val()
 
     console.log(ingredientInput);
+
 
     var settings = {
         "async": true,
@@ -27,9 +28,14 @@ $(".ingredBtn").on("click", function(event) {
         var link = $("<a>");
         var newRecp = results.results[i].href
         link.attr("href", newRecp)
-        $(".recipes").append(link);
+        link.attr("target", "_blank")
+        link.text(newRecp);
+        // console.log(link);
+        newP.html(link);
+        $(".recipes").append(newP);
         }
     });
+
 
 
 });
@@ -37,11 +43,12 @@ $(".ingredBtn").on("click", function(event) {
 $(".mealBtn").on("click", function(event) {
 
     event.preventDefault();
-    $(".recipes").empty();
+   
 
     var mealInput = $(".inputMeal").val()
 
     console.log(mealInput);
+
 
     var settings = {
         "async": true,
@@ -63,19 +70,6 @@ $(".mealBtn").on("click", function(event) {
         }
     });
 
-
-
-
-});
-
-$("#saveBtn").on("click", function(event) {
-    event.preventDefault();
-    console.log("hi")
-    var newDay = $("#daySelector").val();
-    var newMeal = $("#mealSelector").val();
-    var newChef = $("#chefSelector").val();
-
-    console.log(newDay + newMeal + newChef);
 
 
 });
@@ -105,3 +99,24 @@ $(".urlBtn").on("click", function(event) {
 
 
 });
+
+
+
+
+
+
+
+$("#saveBtn").on("click", function(event) {
+    event.preventDefault();
+    console.log("hi")
+    var newDay = $("#daySelector").val();
+    var newMeal = $("#mealSelector").val();
+    var newChef = $("#chefSelector").val();
+
+    console.log(newDay + newMeal + newChef);
+
+
+    $("#saveBtn").attr("data-dismiss", "modal")
+
+});
+
