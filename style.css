@@ -14,7 +14,8 @@ body{
 }
 
 .navbar{
-    background-color:hsla(110, 100%, 32%, 1);
+    background-color:hsla(60, 20%, 99%, 0.9);
+    border-radius: 10px;
 }
 /* url(https://files.123freevectors.com/wp-content/original/110440-black-and-blue-blurred-background-vector.jpg) */
 
@@ -29,7 +30,7 @@ body{
 
 hr{
     border-width: 2px;
-    border-color:  hsla(360, 100%, 32%, 1);
+    border-color:hsla(9, 78%, 55%, 1);
     margin-top: 10px;
 }
 
@@ -51,28 +52,28 @@ hr{
 
 button {
     /* position: relative; */
-    width: 180px;
-    background-color:  hsla(360, 100%, 32%, 1);
-    border: none;
+    width: 146px;
+    background-color:   hsla(9, 78%, 55%, 1);
+    border-radius: 10px;
     box-shadow: none;
     outline: none;
     cursor: pointer;
     color: #fff;
     padding: 10px;
-    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 2px;
     
 }
 
 button:hover{
-    background-color: coral;
+    background-color: hsla(0, 50%, 49%, 1);
 }
 
 ul {
     position: absolute;
     margin-left: 5px;
     padding: 0;
-    width: 180px;
+    width: 160px;
     background-color: #ccc;
     transform-origin: top;
     transform: perspective(1000px) rotateX(-90deg) ;
@@ -104,7 +105,7 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: coral;
+    background-color: hsla(0, 50%, 49%, 1);
     color: #fff;
 }
 
@@ -114,15 +115,16 @@ ul li a:hover {
 
 
 .nav-item.nav-link{
-    margin-left: 30px;
+    margin: auto 100px auto 100px;
 }
 
 h4 {
-    color: hsla(60, 20%, 99%, 0.9);
+    color: hsla(9, 78%, 55%, 1);
 }
 
 h4:hover{
-    color: coral;
+    color: hsla(0, 50%, 49%, 1);
+    font-size: 25px;
 }
 
 /*---------- End of Olex's CSS Section --------------*/

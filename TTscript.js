@@ -5,7 +5,7 @@ $(document).ready(function() {
   var chef = "Chandler"
   
 
-  $("#dateEl").text(new Date().toLocaleDateString());
+  $("#dateEl").prepend(new Date().toLocaleDateString());
   $("#chefName").text(chef);
   $("#dishName").text(dish);
 
