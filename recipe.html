@@ -43,11 +43,6 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12">
-                
-            </div>
-        </div>
 
         
         <div class="row">
@@ -57,6 +52,66 @@
                     <input type="text" class="inputURL">
                     <button type = "submit" class = "btn btn-primary urlBtn" data-toggle="modal" data-target ="optionsModal">Submit</button>
                 </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+               
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#optionsModal">
+                    Launch demo modal
+                </button>
+  
+  
+                <div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Please choose options for this meal!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                                 </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="Day Chooser">What day would you like to have this recipe?</label>
+                                        <select class="form-control" id="daySelector">
+                                            <option>Monday</option>
+                                            <option>Tuesday</option>
+                                            <option>Wednesday</option>
+                                            <option>Thursday</option>
+                                            <option>Friday</option>
+                                            <option>Saturday</option>
+                                            <option>Sunday</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Meal Chooser">What meal would you like to have this recipe?</label>
+                                        <select class="form-control" id="mealSelector">
+                                            <option>Breakfast</option>
+                                            <option>Lunch</option>
+                                            <option>Dinner</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Chef Chooser">Who would you like to cook this meal?</label>
+                                        <select class="form-control" id="chefSelector">
+                                            <option>Anna</option>
+                                            <option>Joe</option>
+                                            <option>Oleksandr</option>
+                                            <option>Tingting</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id = "saveBtn">Save changes</button>
+                            </div>
+                        </div>
+                     </div>
+                </div>
             </div>
         </div>
     
