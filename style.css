@@ -73,7 +73,7 @@ ul {
     position: absolute;
     margin-left: 5px;
     padding: 0;
-    width: 160px;
+    width: 146px;
     background-color: #ccc;
     transform-origin: top;
     transform: perspective(1000px) rotateX(-90deg) ;
@@ -101,6 +101,7 @@ ul li a {
     color: #fff;
     border-bottom: 1px solid rgba(0,0,0,.2);
     font-family: 'Courgette', cursive;
+    width: 146px;
     /* border-radius: 5px; */
 }
 
