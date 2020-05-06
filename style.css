@@ -81,95 +81,53 @@ hr{
 
 
 /*---------- Olex's CSS Section in progress --------------*/
-/* .dropdown {
-    position: absolute; */
+.dropdown {
+    width: 146px;
+    background-color:   hsla(9, 78%, 55%, 1);
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    text-align: center;
+    /* position: relative;
+    box-shadow: none;
+    outline: none;
+    cur
+    sor: pointer; */
+}
 
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+.dropdown:hover{
+    background-color: hsla(0, 50%, 49%, 1);
+}
+
+.btn{
+    color: #fff;
+    text-align: center;
+    margin-left: auto;
+}
+.btn:hover{
+    font-size: 17px;
 }
 
 /* .row {
     justify-content: center;
 } */
 
-/* button { */
-    /* position: relative; */
-    /* width: 146px;
-    background-color:   hsla(9, 78%, 55%, 1);
-    border-radius: 10px;
-    box-shadow: none;
-    outline: none;
-    cursor: pointer;
-    color: #fff;
-    padding: 10px;
-    margin-right: 5px;
-    margin-bottom: 2px; */
-    
-}
 
-/* button:hover{
-    background-color: hsla(0, 50%, 49%, 1);
-    font-size: 17px;
-}
-
-ul {
-    position: absolute;
-    margin-left: 5px;
-    padding: 0;
-    width: 146px;
-    background-color: #ccc;
-    transform-origin: top;
-    transform: perspective(1000px) rotateX(-90deg) ;
-    transition: 1.5s;
-}
-
-ul.active{
-    transform: perspective(1000px) rotateX(0deg) ;
-} */
-
-/* ul.disable{
-    display: none;
-} */
-
-/* ul li {
-    list-style: none;
-} */
-/* 
-ul li a {
-    display: block;
+.nav-link{
     padding: 10px;
     text-align: center;
-    text-decoration: none;
-    background-color: #262626;
-    color: #fff;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    font-family: 'Courgette', cursive;
-    width: 146px; */
-    /* border-radius: 5px; */
-/* } */
-
-/* ul li a:hover {
-    background-color: hsla(0, 50%, 49%, 1);
-    color: #fff;
-} */
-
-/* .nav-item {
-    margin-right: 0 !important;
-} */
-
-/* 
-.nav-item.nav-link{
+    width: 146px; 
     margin: auto 100px auto 100px;
-}
-
-h4 {
+    font-size: 24px;
     color: hsla(9, 78%, 55%, 1);
 }
 
-h4:hover{
+
+.nav-link:hover{
     color: hsla(0, 50%, 49%, 1);
     font-size: 25px;
-} */
+}
 
 /*---------- End of Olex's CSS Section --------------*/

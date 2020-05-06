@@ -1,4 +1,20 @@
 
+
+  $("#collapse").on("click", function(event){
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("nav").offset().top
+  }, 2000);
+  });
+
+  $("#settings").on("click", function(event){
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $("#fooddiv").offset().top
+  }, 2000);
+  });
+
+
 $(document).ready(function() {
   var rat = $("#rat");
 
@@ -15,6 +31,17 @@ $(document).ready(function() {
   $("#dateEl").prepend(new Date().toLocaleDateString());
   $("#chefName").text(chef);
   $("#dishName").text(dish);
+
+
+  $("#rat").on("click", function(event){
+    for (i=0; i<5; i++){
+      event.preventDefault();
+      rat.animate ({
+        top: (Math.random() * 800),
+        left:  (Math.random() * 1500),
+      }, 1000);
+    }
+  });
 
 
   $("#tomato").on("click", function(event){
@@ -104,6 +131,7 @@ $(document).ready(function() {
     }, 500)
   })
 
+
 //   function loop() {
 //       rat.css({height:"10px", left:0});
 //       rat.animate ({
@@ -116,38 +144,38 @@ $(document).ready(function() {
 //   loop();
 
 
-  $(document).keyup(function(e) {
-    switch (e.which) {
+  // $(document).keyup(function(e) {
+  //   switch (e.which) {
 
-    // Move Buttons (Keyboard Down)
-    case 40:
-      rat.animate({ top: "+=100px" }, "normal");
-      break;
+  //   // Move Buttons (Keyboard Down)
+  //   case 40:
+  //     rat.animate({ top: "+=100px" }, "normal");
+  //     break;
 
-      // Move Buttons (Keyboard Right)
-    case 39:
-      rat.animate({ left: "+=100px" }, "normal");
-      break;
+  //     // Move Buttons (Keyboard Right)
+  //   case 39:
+  //     rat.animate({ left: "+=100px" }, "normal");
+  //     break;
 
-      // Move Buttons (Keyboard Up)
-    case 38:
-      rat.animate({ top: "-=100px" }, "normal");
-      break;
+  //     // Move Buttons (Keyboard Up)
+  //   case 38:
+  //     rat.animate({ top: "-=100px" }, "normal");
+  //     break;
 
-      // Move Buttons (Keyboard Left)
-    case 37:
-      rat.animate({ left: "-=100px" }, "normal");
-      break;
+  //     // Move Buttons (Keyboard Left)
+  //   case 37:
+  //     rat.animate({ left: "-=100px" }, "normal");
+  //     break;
 
-      // "r" key for "run"
-    case 82:
-      rat.attr("style", "animation: run 10s 1");
+  //     // "r" key for "run"
+  //   case 82:
+  //     rat.attr("style", "animation: run 10s 1");
 
 
-    default:
-      break;
-    }
-  });
+  //   default:
+  //     break;
+  //   }
+  // });
  
 var i = 0;   
 function showGif(){
