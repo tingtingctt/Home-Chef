@@ -33,18 +33,3 @@ $(document).ready(function(){
 });
 
 
-//Anna script section
-
-//this takes the recipe from the local storage
-var ingredsList = localStorage.getItem("Recipe Ingredients");
-var instructList = JSON.parse(localStorage.getItem("Recipe Instructions"));
-var ingredsP = $("<p>");
-var instructP = $("<p>");
-
-ingredsP.text(ingredsList);
-instructP.text(instructList[0].steps);
-
-
-$(".ingredientsList").html(ingredsP);
-$(".instructionsList").html(instructP)
-//ends getting recipe from local storage

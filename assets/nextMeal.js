@@ -1,5 +1,5 @@
-var time = 13;
-var day = "Monday";
+var time = 8;
+var day = "Tuesday";
 
 
 
@@ -133,3 +133,101 @@ var day = "Monday";
     var SundayLunchInstructions = JSON.parse(localStorage.getItem("SundayLunchInstructions"));
 
     var SundayDinnerInstructions = JSON.parse(localStorage.getItem("SundayDinnerInstructions"));
+
+    //this takes the recipe from the local storage
+
+var ingredsP = $("<p>");
+var instructP = $("<p>");
+
+
+//If statements determining what recipe to use corresponding to the day and time
+if (day === "Monday" && time <= 9) {
+    ingredsP.text(MondayBreakfastIngredients);
+    instructP.text(MondayBreakfastInstructions[0].steps);
+}
+if (day === "Monday" && time <= 15 && time > 9) {
+    ingredsP.text(MondayLunchIngredients);
+    instructP.text(MondayLunchInstructions[0].steps);
+}
+if (day === "Monday" && time > 15) {
+    ingredsP.text(MondayDinnerIngredients);
+    instructP.text(MondayDinnerInstructions[0].steps);
+}
+
+if (day === "Tuesday" && time <= 9) {
+    ingredsP.text(TuesdayBreakfastIngredients);
+    instructP.text(TuesdayBreakfastInstructions[0].steps);
+}
+if (day === "Tuesday" && time <= 15 && time > 9) {
+    ingredsP.text(TuesdayLunchIngredients);
+    instructP.text(TuesdayLunchInstructions[0].steps);
+}
+if (day === "Tuesday" && time > 15) {
+    ingredsP.text(TuesdayDinnerIngredients);
+    instructP.text(TuesdayDinnerInstructions[0].steps);
+}
+
+if (day === "Wednesday" && time <= 9) {
+    ingredsP.text(WednesdayBreakfastIngredients);
+    instructP.text(WednesdayBreakfastInstructions[0].steps);
+}
+if (day === "Wednesday" && time <= 15 && time > 9) {
+    ingredsP.text(WednesdayLunchIngredients);
+    instructP.text(WednesdayLunchInstructions[0].steps);
+}
+if (day === "Wednesday" && time > 15) {
+    ingredsP.text(WednesdayDinnerIngredients);
+    instructP.text(WednesdayDinnerInstructions[0].steps);
+}
+if (day === "Thursday" && time <= 9) {
+    ingredsP.text(ThursdayBreakfastIngredients);
+    instructP.text(ThursdayBreakfastInstructions[0].steps);
+}
+if (day === "Thursday" && time <= 15 && time > 9) {
+    ingredsP.text(ThursdayLunchIngredients);
+    instructP.text(ThursdayLunchInstructions[0].steps);
+}
+if (day === "Thursday" && time > 15) {
+    ingredsP.text(ThursdayDinnerIngredients);
+    instructP.text(ThursdayDinnerInstructions[0].steps);
+}
+if (day === "Friday" && time <= 9) {
+    ingredsP.text(FridayBreakfastIngredients);
+    instructP.text(FridayBreakfastInstructions[0].steps);
+}
+if (day === "Friday" && time <= 15 && time > 9) {
+    ingredsP.text(FridayLunchIngredients);
+    instructP.text(FridayLunchInstructions[0].steps);
+}
+if (day === "Friday" && time > 15) {
+    ingredsP.text(FridayDinnerIngredients);
+    instructP.text(FridayDinnerInstructions[0].steps);
+}
+if (day === "Saturday" && time <= 9) {
+    ingredsP.text(SaturdayBreakfastIngredients);
+    instructP.text(SaturdayBreakfastInstructions[0].steps);
+}
+if (day === "Saturday" && time <= 15 && time > 9) {
+    ingredsP.text(SaturdayLunchIngredients);
+    instructP.text(SaturdayLunchInstructions[0].steps);
+}
+if (day === "Saturday" && time > 15) {
+    ingredsP.text(SaturdayDinnerIngredients);
+    instructP.text(SaturdayDinnerInstructions[0].steps);
+}
+if (day === "Sunday" && time <= 9) {
+    ingredsP.text(SundayBreakfastIngredients);
+    instructP.text(SundayBreakfastInstructions[0].steps);
+}
+if (day === "Sunday" && time <= 15 && time > 9) {
+    ingredsP.text(SundayLunchIngredients);
+    instructP.text(SundayLunchInstructions[0].steps);
+}
+if (day === "Sunday" && time > 15) {
+    ingredsP.text(SundayDinnerIngredients);
+    instructP.text(SundayDinnerInstructions[0].steps);
+}
+///Ends if statements
+
+$(".ingredientsList").html(ingredsP);
+$(".instructionsList").html(instructP)
