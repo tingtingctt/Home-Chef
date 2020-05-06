@@ -1,8 +1,15 @@
 
 $(document).ready(function() {
   var rat = $("#rat");
-  var dish = localStorage.getItem("Meal choice");
-  var chef = "Chandler"
+
+  if (localStorage.getItem("Meal choice") === null){
+    var dish = "spaghetti";
+    }
+    else {
+      var dish = localStorage.getItem("Meal choice"); 
+    }
+  
+  var chef = localStorage.getItem("Chef for Recipe")
   
 
   $("#dateEl").prepend(new Date().toLocaleDateString());
