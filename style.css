@@ -12,6 +12,12 @@ body{
 }
 /* url(https://files.123freevectors.com/wp-content/original/110440-black-and-blue-blurred-background-vector.jpg) */
 
+.container {
+    margin-top: 45px;
+    /* border-top:gray;
+    border-width: 5px; */
+}
+
 .beige{
     background-color: hsla(60, 20%, 99%, 0.9);
     border-radius: 10px;
@@ -25,6 +31,50 @@ hr{
     border-width: 2px;
     border-color:hsla(9, 78%, 55%, 1);
     margin-top: 10px;
+}
+
+#rat{
+    height: 70px;
+    position:fixed; 
+    /* animation: run 10s infinite; */
+    top:5px; 
+    left: 0px;
+}
+
+@keyframes run {
+    0%   {top: 5px; left: 0px;}
+    25%  {top: 5px; left: 1200px;}
+    50%  {top: 500px; left: 1200px;}
+    75%  {top: 500px; left: 0px;}
+    100% {top: 5px; left: 0px;}
+    /* 25%  {top: 5px; right: 0px;}
+    50%  {bottom: 0px; right: 0px;}
+    75%  {bottom: 0px; left: 0px;}
+    100% {top: 5px; left: 0px;} */
+}
+
+.giphy:hover {
+    height: 220px;
+}
+
+.chef:hover {
+    height: 220px;
+}
+
+.chef {
+    height:200px;
+}
+
+.confetti {
+    position: absolute; 
+    z-index: 1;
+    width: 10px;  
+    top: -10px; 
+    left: 0px;
+}
+
+.confetti:hover {
+    width: 62px;
 }
 
 /*---------- End of TT's CSS Section  --------------*/
