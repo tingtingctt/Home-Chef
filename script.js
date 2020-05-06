@@ -31,3 +31,19 @@ $(document).ready(function(){
     })
     
 });
+
+
+//Anna script section
+
+var ingredsList = localStorage.getItem("Recipe Ingredients");
+var instructList = JSON.parse(localStorage.getItem("Recipe Instructions"));
+var ingredsP = $("<p>");
+var instructP = $("<p>");
+console.log(instructList)
+
+ingredsP.text(ingredsList);
+instructP.text(instructList[0].steps);
+
+
+$(".ingredientsList").html(ingredsP);
+$(".instructionsList").html(instructP)
