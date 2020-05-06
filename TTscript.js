@@ -46,6 +46,57 @@ $(document).ready(function() {
   });
 
 
+  $(".chef").on("click",function() {
+    $("#wine").css({height:"10px", left:0, top: '-10px'});
+    $("#wine").animate({
+      left: '+=290px',
+      top: '-=340px',
+      width: '60px'
+    }, 500)
+
+    $("#squid").css({height:"10px", left:0, top: '-10px'});
+    $("#squid").animate({
+      left: '+=230px',
+      top: '-=330px',
+      width: '60px'
+    }, 500)
+
+    $("#milk").css({height:"10px", left:0, top: '-10px'});
+    $("#milk").animate({
+      left: '+=170px',
+      top: '-=320px',
+      width: '60px'
+    }, 500)
+
+    $("#tomato").css({height:"10px", left:0, top: '-10px'});
+    $("#tomato").animate({
+      left: '+=110px',
+      top: '-=330px',
+      width: '60px'
+    }, 500)
+
+    $("#lettuce").css({height:"10px", left:0, top: '-10px'});
+    $("#lettuce").animate({
+      left: '+=50px',
+      top: '-=330px',
+      width: '60px'
+    }, 500)
+
+    $("#eggplant").css({height:"10px", left:0, top: '-10px'});
+    $("#eggplant").animate({
+      left: '-=10px',
+      top: '-=330px',
+      width: '60px'
+    }, 500)
+
+    $("#banana").css({height:"10px", left:0, top: '-10px'});
+    $("#banana").animate({
+      left: '-=80px',
+      top: '-=325px',
+      width: '60px'
+    }, 500)
+  })
+
 //   function loop() {
 //       rat.css({height:"10px", left:0});
 //       rat.animate ({
@@ -81,6 +132,11 @@ $(document).ready(function() {
       rat.animate({ left: "-=100px" }, "normal");
       break;
 
+      // "r" key for "run"
+    case 82:
+      rat.attr("style", "animation: run 10s 1");
+
+
     default:
       break;
     }
@@ -98,6 +154,7 @@ function showGif(){
         var gif = $("<img>");
         gif.attr("src", imageUrl);
         gif.attr("alt", "Meal Image");
+        gif.attr("class", "giphy");
         $("#images").html(gif);
   });
 }
