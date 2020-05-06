@@ -1,5 +1,5 @@
-var time = 8;
-var day = "Tuesday";
+var time = 11;
+var day = "Wednesday";
 
 
 
