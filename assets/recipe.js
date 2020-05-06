@@ -1,5 +1,7 @@
 
 var recipeTitle = "";
+var recipeIngredients = "";
+var recipeInstructions = "";
 
 $(".ingredBtn").on("click", function(event) {
 
@@ -108,12 +110,12 @@ $(".urlBtn").on("click", function(event) {
         console.log(response[0].instructions);
 
         recipeTitle = response[0].name
-        var recipeIngredients = response[0].ingredients
-        var recipeInstructions = JSON.stringify(response[0].instructions)
+        recipeIngredients = response[0].ingredients
+        recipeInstructions = JSON.stringify(response[0].instructions)
 
         localStorage.setItem("Recipe Title", recipeTitle)
-        localStorage.setItem("Recipe Ingredients", recipeIngredients)
-        localStorage.setItem("Recipe Instructions", recipeInstructions)
+        // localStorage.setItem("Recipe Ingredients", recipeIngredients)
+        // localStorage.setItem("Recipe Instructions", recipeInstructions)
     });
 
     //Why doesn't this work
@@ -146,66 +148,108 @@ $("#saveBtn").on("click", function(event) {
     //they all should say recipe title. The goal is to move this onclick into the submit when I merge the buttons so the var is also there
     if (newDay === "Monday" && newMeal === "Breakfast") {
         localStorage.setItem("MondayBreakfast", recipeTitle);
+        localStorage.setItem("MondayBreakfastIngredients", recipeIngredients);
+        localStorage.setItem("MondayBreakfastInstructions", recipeInstructions);
     }
     else if (newDay === "Monday" && newMeal === "Lunch") {
         localStorage.setItem("MondayLunch", recipeTitle);
+        localStorage.setItem("MondayLunchIngredients", recipeIngredients);
+        localStorage.setItem("MondayLunchInstructions", recipeInstructions);
     }
     else if (newDay === "Monday" && newMeal === "Dinner") {
         localStorage.setItem("MondayDinner", recipeTitle);
+        localStorage.setItem("MondayDinnerIngredients", recipeIngredients);
+        localStorage.setItem("MondayDinnerInstructions", recipeInstructions);
     }
     else if (newDay === "Tuesday" && newMeal === "Breakfast") {
         localStorage.setItem("TuesdayBreakfast", recipeTitle);
+        localStorage.setItem("TuesdayBreakfastIngredients", recipeIngredients);
+        localStorage.setItem("TuesdayBreakfastInstructions", recipeInstructions);
     }
     else if (newDay === "Tuesday" && newMeal === "Lunch") {
         localStorage.setItem("TuesdayLunch", recipeTitle);
+        localStorage.setItem("TuesdayLunchIngredients", recipeIngredients);
+        localStorage.setItem("TuesdayLunchInstructions", recipeInstructions);
     }
     else if (newDay === "Tuesday" && newMeal === "Dinner") {
         localStorage.setItem("TuesdayDinner", recipeTitle);
+        localStorage.setItem("TuesdayDinnerIngredients", recipeIngredients);
+        localStorage.setItem("TuesdayDinnerInstructions", recipeInstructions);
     }
     else if (newDay === "Wednesday" && newMeal === "Breakfast") {
         localStorage.setItem("WednesdayBreakfast", recipeTitle);
+        localStorage.setItem("WednesdayBreakfastIngredients", recipeIngredients);
+        localStorage.setItem("WednesdayBreakfastInstructions", recipeInstructions);
     }
     else if (newDay === "Wednesday" && newMeal === "Lunch") {
         localStorage.setItem("WednesdayLunch", recipeTitle);
+        localStorage.setItem("WednesdayLunchIngredients", recipeIngredients);
+        localStorage.setItem("WednesdayLunchInstructions", recipeInstructions);
     }
     else if (newDay === "Wednesday" && newMeal === "Dinner") {
         localStorage.setItem("WednesdayDinner", recipeTitle);
+        localStorage.setItem("WednesdayDinnerIngredients", recipeIngredients);
+        localStorage.setItem("WednesdayDinnerInstructions", recipeInstructions);
     }
     else if (newDay === "Thursday" && newMeal === "Breakfast") {
         localStorage.setItem("ThursdayBreakfast", recipeTitle);
+        localStorage.setItem("ThursdayBreakfastIngredients", recipeIngredients);
+        localStorage.setItem("ThursdayBreakfastInstructions", recipeInstructions);
     }
     else if (newDay === "Thursday" && newMeal === "Lunch") {
         localStorage.setItem("ThursdayLunch", recipeTitle);
+        localStorage.setItem("ThursdayLunchIngredients", recipeIngredients);
+        localStorage.setItem("ThursdayLunchInstructions", recipeInstructions);
     }
     else if (newDay === "Thursday" && newMeal === "Dinner") {
         localStorage.setItem("ThursdayDinner", recipeTitle);
+        localStorage.setItem("ThursdayDinnerIngredients", recipeIngredients);
+        localStorage.setItem("ThursdayDinnerInstructions", recipeInstructions);
     }
     else if (newDay === "Friday" && newMeal === "Breakfast") {
         localStorage.setItem("FridayBreakfast", recipeTitle);
+        localStorage.setItem("FridayBreakfastIngredients", recipeIngredients);
+        localStorage.setItem("FridayBreakfastInstructions", recipeInstructions);
     }
     else if (newDay === "Friday" && newMeal === "Lunch") {
         localStorage.setItem("FridayLunch", recipeTitle);
+        localStorage.setItem("FridayLunchIngredients", recipeIngredients);
+        localStorage.setItem("FridayLunchInstructions", recipeInstructions);
     }
     else if (newDay === "Friday" && newMeal === "Dinner") {
         localStorage.setItem("FridayDinner", recipeTitle);
+        localStorage.setItem("FridayDinnerIngredients", recipeIngredients);
+        localStorage.setItem("FridayDinnerInstructions", recipeInstructions);
     }
     else if (newDay === "Saturday" && newMeal === "Breakfast") {
         localStorage.setItem("SaturdayBreakfast", recipeTitle);
+        localStorage.setItem("SaturdayBreakfastIngredients", recipeIngredients);
+        localStorage.setItem("SaturdayBreakfastInstructions", recipeInstructions);
     }
     else if (newDay === "Saturday" && newMeal === "Lunch") {
         localStorage.setItem("SaturdayLunch", recipeTitle);
+        localStorage.setItem("SaturdayLunchIngredients", recipeIngredients);
+        localStorage.setItem("SaturdayLunchInstructions", recipeInstructions);
     }
     else if (newDay === "Saturday" && newMeal === "Dinner") {
         localStorage.setItem("SaturdayDinner", recipeTitle);
+        localStorage.setItem("SaturdayDinnerIngredients", recipeIngredients);
+        localStorage.setItem("SaturdayDinnerInstructions", recipeInstructions);
     }
     else if (newDay === "Sunday" && newMeal === "Breakfast") {
         localStorage.setItem("SundayBreakfast", recipeTitle);
+        localStorage.setItem("SundayBreakfastIngredients", recipeIngredients);
+        localStorage.setItem("SundayBreakfastInstructions", recipeInstructions);
     }
     else if (newDay === "Sunday" && newMeal === "Lunch") {
         localStorage.setItem("SundayLunch", recipeTitle);
+        localStorage.setItem("SundayLunchIngredients", recipeIngredients);
+        localStorage.setItem("SundayLunchInstructions", recipeInstructions);
     }
     else if (newDay === "Sunday" && newMeal === "Dinner") {
         localStorage.setItem("SundayDinner", recipeTitle);
+        localStorage.setItem("SundayDinnerIngredients", recipeIngredients);
+        localStorage.setItem("SundayDinnerInstructions", recipeInstructions);
     }
 
 });
