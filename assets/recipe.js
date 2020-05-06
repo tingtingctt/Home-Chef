@@ -8,7 +8,8 @@ $(".ingredBtn").on("click", function(event) {
     var ingredientInput = $(".inputIngredient").val()
 
     console.log(ingredientInput);
-
+    localStorage.setItem("Ingredient Input", ingredientInput);
+    $(".recipes").empty();
 
     var settings = {
         "async": true,
@@ -48,6 +49,8 @@ $(".mealBtn").on("click", function(event) {
     var mealInput = $(".inputMeal").val()
 
     console.log(mealInput);
+    localStorage.setItem("Meal choice", mealInput)
+    
 
 
     var settings = {
@@ -112,7 +115,9 @@ $(".urlBtn").on("click", function(event) {
         localStorage.setItem("Recipe Instructions", recipeInstructions)
     });
 
+    //Why doesn't this work
 
+    // $('#optionsModal').modal('show');
 
 });
 

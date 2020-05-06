@@ -2,7 +2,7 @@
 
 h1 {
 
-    background-color: pink;
+    
     height: 100px;
     text-align: center;
     border-bottom: solid 3px hsla(9, 78%, 55%, 1);
@@ -12,10 +12,10 @@ h5, h2 {
     text-align: center;
 }
 
-.container {
+/* .container {
 
     background-color: pink;
-}
+} */
 
 .inputGroup {
     padding-top:50px;
@@ -37,4 +37,17 @@ h4 {
 h4:hover{
     color: hsla(0, 50%, 49%, 1);
     font-size: 25px;
+}
+
+#borderSection {
+    border-bottom: solid 3px hsla(9, 78%, 55%, 1);
+}
+
+.ingredBtn, .mealBtn, .urlBtn {
+    background-color: hsla(9, 78%, 55%, 1);
+    border: none;
+}
+
+.btn:hover{
+    background-color: hsla(0, 50%, 49%, 1);
 }

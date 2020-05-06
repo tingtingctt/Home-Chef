@@ -1,7 +1,8 @@
 
 $(document).ready(function() {
   var rat = $("#rat");
-  var dish = "Spaghetti";
+  var dish = localStorage.getItem("Meal choice");
+  console.log(dish)
   var chef = "Chandler"
   
 
