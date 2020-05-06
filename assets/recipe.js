@@ -1,4 +1,5 @@
 
+var recipeTitle = "";
 
 $(".ingredBtn").on("click", function(event) {
 
@@ -106,7 +107,7 @@ $(".urlBtn").on("click", function(event) {
         console.log(response[0].ingredients);
         console.log(response[0].instructions);
 
-        var recipeTitle = response[0].name
+        recipeTitle = response[0].name
         var recipeIngredients = response[0].ingredients
         var recipeInstructions = JSON.stringify(response[0].instructions)
 
@@ -117,7 +118,9 @@ $(".urlBtn").on("click", function(event) {
 
     //Why doesn't this work
 
-    // $('#optionsModal').modal('show');
+    $('#optionsModal').modal({
+        show: true
+    });
 
 });
 
@@ -136,12 +139,73 @@ $("#saveBtn").on("click", function(event) {
 
     $("#saveBtn").attr("data-dismiss", "modal")
 
-    localStorage.setItem("Day for Recipe", newDay)
-    localStorage.setItem("Meal for Recipe", newMeal)
     localStorage.setItem("Chef for Recipe", newChef)
 
+    //If/then statements for modal options
 
+    //they all should say recipe title. The goal is to move this onclick into the submit when I merge the buttons so the var is also there
+    if (newDay === "Monday" && newMeal === "Breakfast") {
+        localStorage.setItem("MondayBreakfast", recipeTitle);
+    }
+    else if (newDay === "Monday" && newMeal === "Lunch") {
+        localStorage.setItem("MondayLunch", recipeTitle);
+    }
+    else if (newDay === "Monday" && newMeal === "Dinner") {
+        localStorage.setItem("MondayDinner", recipeTitle);
+    }
+    else if (newDay === "Tuesday" && newMeal === "Breakfast") {
+        localStorage.setItem("TuesdayBreakfast", recipeTitle);
+    }
+    else if (newDay === "Tuesday" && newMeal === "Lunch") {
+        localStorage.setItem("TuesdayLunch", recipeTitle);
+    }
+    else if (newDay === "Tuesday" && newMeal === "Dinner") {
+        localStorage.setItem("TuesdayDinner", recipeTitle);
+    }
+    else if (newDay === "Wednesday" && newMeal === "Breakfast") {
+        localStorage.setItem("WednesdayBreakfast", recipeTitle);
+    }
+    else if (newDay === "Wednesday" && newMeal === "Lunch") {
+        localStorage.setItem("WednesdayLunch", recipeTitle);
+    }
+    else if (newDay === "Wednesday" && newMeal === "Dinner") {
+        localStorage.setItem("WednesdayDinner", recipeTitle);
+    }
+    else if (newDay === "Thursday" && newMeal === "Breakfast") {
+        localStorage.setItem("ThursdayBreakfast", recipeTitle);
+    }
+    else if (newDay === "Thursday" && newMeal === "Lunch") {
+        localStorage.setItem("ThursdayLunch", recipeTitle);
+    }
+    else if (newDay === "Thursday" && newMeal === "Dinner") {
+        localStorage.setItem("ThursdayDinner", recipeTitle);
+    }
+    else if (newDay === "Friday" && newMeal === "Breakfast") {
+        localStorage.setItem("FridayBreakfast", recipeTitle);
+    }
+    else if (newDay === "Friday" && newMeal === "Lunch") {
+        localStorage.setItem("FridayLunch", recipeTitle);
+    }
+    else if (newDay === "Friday" && newMeal === "Dinner") {
+        localStorage.setItem("FridayDinner", recipeTitle);
+    }
+    else if (newDay === "Saturday" && newMeal === "Breakfast") {
+        localStorage.setItem("SaturdayBreakfast", recipeTitle);
+    }
+    else if (newDay === "Saturday" && newMeal === "Lunch") {
+        localStorage.setItem("SaturdayLunch", recipeTitle);
+    }
+    else if (newDay === "Saturday" && newMeal === "Dinner") {
+        localStorage.setItem("SaturdayDinner", recipeTitle);
+    }
+    else if (newDay === "Sunday" && newMeal === "Breakfast") {
+        localStorage.setItem("SundayBreakfast", recipeTitle);
+    }
+    else if (newDay === "Sunday" && newMeal === "Lunch") {
+        localStorage.setItem("SundayLunch", recipeTitle);
+    }
+    else if (newDay === "Sunday" && newMeal === "Dinner") {
+        localStorage.setItem("SundayDinner", recipeTitle);
+    }
 
 });
-
-
