@@ -1,15 +1,8 @@
 
 /*---------- TT's CSS Section in progress --------------*/
 body{
-    /* background-color: rgb(241, 86, 59,1); */
-    /* background-color: rgb(63, 12, 3); */
-    /* background-color: rgb(127, 214, 55); */
-    /* background-color: rgb(229, 241, 59, 1); */
-    /* background-color: rgb(59, 183, 241, 1); */
-    /* background-color: rgb(81, 6, 124); */
-    background-color: rgb(252, 252, 252, 1);
-    /* background-image: url("assets/TT Images/color grid 3.png"); */
-    /* background-color: rgb(31, 32, 32, 1); */
+    background-color: rgb(252, 252, 252);
+    background-image: url("assets/TT Images/wood.jpg");
     background-size: cover;
 }
 
@@ -67,6 +60,7 @@ button {
 
 button:hover{
     background-color: hsla(0, 50%, 49%, 1);
+    font-size: 17px;
 }
 
 ul {
