@@ -1,12 +1,12 @@
 // var time = 8;
-// var day = "Tuesday";
+var day = "Saturday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
 var format = "dddd";
 nowDate = d.toLocaleDateString()
 var result = moment(nowDate).format(format);
-var day = result
+// var day = result
 var hourString = moment(d).format("H");
 var time = parseFloat(hourString);
 
@@ -345,6 +345,7 @@ if (day === "Thursday" && (time <= 15 && time > 9)) {
 
 if (day === "Thursday" && time > 15) {
     ingredsP.text(ThursdayDinnerIngredients);
+    console.log(ThursdayDinnerInstructions[0].steps)
     instructP.text(ThursdayDinnerInstructions[0].steps);
     if (localStorage.getItem("ThursdayDinnerMealChoice") === null){
         dish = "spaghetti";
