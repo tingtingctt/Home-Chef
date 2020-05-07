@@ -1,6 +1,14 @@
-var time = 11;
-var day = "Wednesday";
+// var time = 11;
+// var day = "Wednesday";
 
+var d = new Date();
+var format = "dddd";
+nowDate = d.toLocaleDateString()
+var result = moment(nowDate).format(format);
+var day = result
+console.log("date" + result);
+var hourString = moment(d).format("H");
+time = parseFloat(hourString);
 
 
     //title variable local gets
