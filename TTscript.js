@@ -43,8 +43,6 @@ $(document).ready(function() {
   }); 
 
 
-
-
   
   var chef = localStorage.getItem("Chef for Recipe")
   
