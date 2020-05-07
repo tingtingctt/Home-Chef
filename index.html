@@ -39,7 +39,7 @@
             <a class="nav-link" href="grocerylist.html">Grocery</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" id="settings">Settings</a>
+              <a class="nav-link" href="#" id="settings">Settings</a>
             </li>
         </ul>
       </nav>
@@ -131,6 +131,7 @@
       <br>
       <br>
 
+
       <div class="row">
         <div class="col-md-12">
             <h2 id="dateEl"> &nbsp; Today's Lunch</h2>
@@ -138,20 +139,46 @@
     </div>
 
     <hr>
-
+    
 
     <div class="row">
+      
       <div class="col-md-1"></div>
+      
+      <!-- Food Giphy images - click to change images -->
       <div class="col-md-5"> 
         <h3 id="dishName"></h3>
       </div>
-      <div class="col-md-2"></div>
+
+      <!-- Virtual garden -->
+      <div class="col-md-2">
+        <div>
+          <img id="gardenbtn" src="assets/TT Images/lettuce.png">
+        </div>
+        <div id="whiteout" class="beige">
+          <div id="gardendiv" class="beige">
+            <div id="exit" class="beige" style="position: absolute; top: -15px; right: -15px;">
+              ->
+            </div>
+              <img id="gardenImg" class="d-block w-100" src="assets/TT Images/garden.jpg">
+              <img id="mushroom1" src="assets/TT Images/mushroom.png">
+              <img id="mushroom2" src="assets/TT Images/mushroom.png">
+              <img id="weed1" src="assets/TT Images/weed.png">
+              <img id="weed2" src="assets/TT Images/weed.png">
+            </div>
+        </div>
+      </div>
+
+      <!--Chef image - click to change placemats (background images)-->
       <div class="col-md-3">
         <h3>Chef: &nbsp;<span id="chefName"></span></h3>
       </div>
+
       <div class="col-md-1"></div>
+
     </div>
 
+    <!-- Pop-out clickables to change placemats (background images) -->
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-5" id="images"> </div>
@@ -188,6 +215,8 @@
 
     <br>
     <hr>
+
+<!-- Ingredient list and instructions - linked to local storages  -->
     
     <div class="row">
 

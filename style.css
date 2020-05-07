@@ -1,5 +1,65 @@
 
-/* #rat display:none */
+/* #gardenbtn {
+    transform: rotate(45deg);
+} */
+
+@keyframes rotate {
+    from {
+              transform: rotate(0deg);
+    }
+    to {
+              transform: rotate(360deg);
+    }
+}
+  
+@keyframes rev-rotate {
+    from {
+                transform: rotate(0deg);
+    }
+    to {
+                transform: rotate(-360deg);
+    } 
+}
+
+
+body{
+    background-color: rgb(252, 252, 252);
+    background-image: url("assets/TT Images/wood.jpg");
+    background-size: cover;
+}
+
+.navbar{
+    background-color:hsla(60, 20%, 99%, 0.9);
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 45px;
+}
+
+.beige{
+    background-color: hsla(60, 20%, 99%, 0.9);
+    border-radius: 10px;
+}
+
+.padding25{
+    padding:25px;
+}
+
+hr{
+    border-width: 2px;
+    border-color:hsla(9, 78%, 55%, 1);
+    margin-top: 10px;
+}
+
+#rat{
+    height: 70px;
+    position:fixed; 
+    /* animation: run 10s infinite; */
+    top:5px; 
+    left: 0px;
+    display: none;
+}
 
 #fooddiv {
     position:relative;
@@ -67,49 +127,7 @@
 
 h2:hover {
     font-size: 33px;
-}
-
-/*---------- TT's CSS Section in progress --------------*/
-body{
-    background-color: rgb(252, 252, 252);
-    background-image: url("assets/TT Images/wood.jpg");
-    background-size: cover;
-}
-
-.navbar{
-    background-color:hsla(60, 20%, 99%, 0.9);
-    border-radius: 10px;
-}
-/* url(https://files.123freevectors.com/wp-content/original/110440-black-and-blue-blurred-background-vector.jpg) */
-
-.container {
-    margin-top: 45px;
-    /* border-top:gray;
-    border-width: 5px; */
-}
-
-.beige{
-    background-color: hsla(60, 20%, 99%, 0.9);
-    border-radius: 10px;
-}
-
-.padding25{
-    padding:25px;
-}
-
-hr{
-    border-width: 2px;
-    border-color:hsla(9, 78%, 55%, 1);
-    margin-top: 10px;
-}
-
-#rat{
-    height: 70px;
-    position:fixed; 
-    /* animation: run 10s infinite; */
-    top:5px; 
-    left: 0px;
-    display: none;
+    color: hsla(9, 78%, 55%, 1);
 }
 
 @keyframes run {
@@ -118,10 +136,6 @@ hr{
     50%  {top: 500px; left: 1200px;}
     75%  {top: 500px; left: 0px;}
     100% {top: 5px; left: 0px;}
-    /* 25%  {top: 5px; right: 0px;}
-    50%  {bottom: 0px; right: 0px;}
-    75%  {bottom: 0px; left: 0px;}
-    100% {top: 5px; left: 0px;} */
 }
 
 .giphy:hover {
@@ -148,10 +162,68 @@ hr{
     width: 62px;
 }
 
-/*---------- End of TT's CSS Section  --------------*/
 
 
-/*---------- Olex's CSS Section in progress --------------*/
+#gardenbtn {
+    position: relative;
+    top: 260px;
+    left: -80px;
+    width: 80px;  
+}
+
+#whiteout {
+    position: fixed;
+    height: 99%;
+    width: 99%;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+#gardendiv{
+    height: 492px;
+    width: 650px;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#weed1 {
+    height: 70px;
+    position:fixed; 
+    top: 30%; 
+    left: 5%;
+}
+
+#weed2 {
+    height: 70px;
+    position:fixed; 
+    top: 28%; 
+    left: 32%;
+}
+
+#mushroom1 {
+    height: 70px;
+    position:fixed; 
+    top: 28%; 
+    left: 76%;
+}
+
+#mushroom2 {
+    height: 70px;
+    position:fixed; 
+    top: 55%; 
+    left: 40%;
+}
+
+
+/* ----- nav bar -------- */
+
 .dropdown {
     width: 146px;
     background-color:   hsla(9, 78%, 55%, 1);
@@ -177,19 +249,16 @@ hr{
     text-align: center;
     margin-left: auto;
 }
+
 .btn:hover{
     font-size: 17px;
 }
-
-/* .row {
-    justify-content: center;
-} */
 
 
 .nav-link{
     padding: 10px;
     text-align: center;
-    width: 146px; 
+    width: 166px; 
     margin: auto 100px auto 100px;
     font-size: 24px;
     color: hsla(9, 78%, 55%, 1);
@@ -201,4 +270,3 @@ hr{
     font-size: 25px;
 }
 
-/*---------- End of Olex's CSS Section --------------*/
