@@ -1,13 +1,13 @@
 
 
-button {
+/* button {
     display: inline-block;
-    height: 134px;
+    height: 10px;
     padding: 0;
     margin: 0;
     vertical-align: top;
     width: 104px;
-}
+} */
 
 #close-image img {
     display: block;
@@ -21,4 +21,12 @@ button {
     height: 134px;  
     width: 104px;
 }
+#someString, #someString2 {
+padding: 2px 5px 25px 5px!important;
+
+height: 24px;
+
+}
+
+
 
