@@ -1,5 +1,65 @@
 
 
+
+
+
+$(document).ready(function() {
+  var rat = $("#rat");
+
+
+  $("#who").on("click", function(event){
+    event.preventDefault();
+    $("#selectavatar").attr("style", "display: block");
+    rat.attr("style", "display: none");
+  }); 
+
+
+  $("#selectmickey").on("click", function(event){
+    event.preventDefault();
+    rat.attr("src","assets/TT Images/mickey.png");
+    rat.attr("style", "display: block");
+    $("#selectavatar").attr("style", "display: none");
+  }); 
+
+  $("#selectrat").on("click", function(event){
+    event.preventDefault();
+    rat.attr("src","assets/TT Images/ratatouille carrot.png");
+    rat.attr("style", "display: block");
+    $("#selectavatar").attr("style", "display: none");
+  }); 
+
+  $("#selectbob").on("click", function(event){
+    event.preventDefault();
+    rat.attr("src","assets/TT Images/spongebob.png");
+    rat.attr("style", "display: block");
+    $("#selectavatar").attr("style", "display: none");
+  }); 
+
+  $("#selectgustav").on("click", function(event){
+    event.preventDefault();
+    rat.attr("src","assets/TT Images/gustav.png");
+    rat.attr("style", "display: block");
+    $("#selectavatar").attr("style", "display: none");
+  }); 
+
+
+
+
+  if (localStorage.getItem("Meal choice") === null){
+    var dish = "spaghetti";
+    }
+    else {
+      var dish = localStorage.getItem("Meal choice"); 
+    }
+
+  
+  var chef = localStorage.getItem("Chef for Recipe")
+  
+
+  $("#dateEl").prepend(new Date().toLocaleDateString());
+  $("#chefName").text(chef);
+  // $("#dishName").text(dish);
+
   $("#collapse").on("click", function(event){
     event.preventDefault();
     $('html, body').animate({
@@ -13,24 +73,6 @@
       scrollTop: $("#fooddiv").offset().top
   }, 2000);
   });
-
-
-$(document).ready(function() {
-  var rat = $("#rat");
-
-  // if (localStorage.getItem("Meal choice") === null){
-  //   var dish = "spaghetti";
-  //   }
-  //   else {
-  //     var dish = localStorage.getItem("Meal choice"); 
-  //   }
-  
-  var chef = localStorage.getItem("Chef for Recipe")
-  
-
-  $("#dateEl").prepend(new Date().toLocaleDateString());
-  $("#chefName").text(chef);
-  // $("#dishName").text(dish);
 
 
   $("#rat").on("click", function(event){
