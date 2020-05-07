@@ -1,6 +1,7 @@
 // var time = 11;
 // var day = "Wednesday";
 
+//these lines get the current day and time (in military) from the local computer
 var d = new Date();
 var format = "dddd";
 nowDate = d.toLocaleDateString()
@@ -10,6 +11,35 @@ console.log("date" + result);
 var hourString = moment(d).format("H");
 time = parseFloat(hourString);
 
+    //variables for giphy api
+    var MondayBreakfastMealChoice = localStorage.getItem("MondayBreakfastMealChoice");
+    var MondayLunchMealChoice = localStorage.getItem("MondayLunchMealChoice");
+    var MondayDinnerMealChoice = localStorage.getItem("MondayDinnerMealChoice");
+
+    var TuesdayBreakfastMealChoice = localStorage.getItem("TuesdayBreakfastMealChoice");
+    var TuesdayLunchMealChoice = localStorage.getItem("TuesdayLunchMealChoice");
+    var TuesdayDinnerMealChoice = localStorage.getItem("TuesdayDinnerMealChoice");
+
+    var WednesdayBreakfastMealChoice = localStorage.getItem("WednesdayBreakfastMealChoice");
+    var WednesdayLunchMealChoice = localStorage.getItem("WednesdayLunchMealChoice");
+    var WednesdayDinnerMealChoice = localStorage.getItem("WednesdayDinnerMealChoice");
+
+    var ThursdayBreakfastMealChoice = localStorage.getItem("ThursdayBreakfastMealChoice");
+    var ThursdayLunchMealChoice = localStorage.getItem("ThursdayLunchMealChoice");
+    var ThursdayDinnerMealChoice = localStorage.getItem("ThursdayDinnerMealChoice");
+
+    var FridayBreakfastMealChoice = localStorage.getItem("FridayBreakfastMealChoice");
+    var FridayLunchMealChoice = localStorage.getItem("FridayLunchMealChoice");
+    var FridayDinnerMealChoice = localStorage.getItem("FridayDinnerMealChoice");
+
+    var SaturdayBreakfastMealChoice = localStorage.getItem("SaturdayBreakfastMealChoice");
+    var SaturdayLunchMealChoice = localStorage.getItem("SaturdayLunchMealChoice");
+    var SaturdayDinnerMealChoice = localStorage.getItem("SaturdayDinnerMealChoice");
+
+    var SundayBreakfastMealChoice = localStorage.getItem("SundayBreakfastMealChoice");
+    var SundayLunchMealChoice = localStorage.getItem("SundayLunchMealChoice");
+    var SundayDinnerMealChoice = localStorage.getItem("SundayDinnerMealChoice");
+   
 
     //title variable local gets
     var MondayBreakfastTitle = localStorage.getItem("MondayBreakfast");
