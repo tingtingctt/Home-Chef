@@ -50,13 +50,13 @@ var MondayBreakfastTitle = localStorage.getItem("MondayBreakfast");
     console.log(inputMonBId);
 
 
-$("#btn-MB").on("click", function(){
+$("#btn-MB").on("click", function(event){
     event.preventDefault();
     var newChoiceMonBre = $(".inputMB").val();
     // var inputMonBId = $("#inputMonB")
     // inputMonBId.attr("placeholder", MondayBreakfastTitle);
 
-    $("#btn-MB").attr("id", "monBre");
+    $(".inputMB").attr("id", "monBre");
     localStorage.setItem("Mon-Breakfast", newChoiceMonBre);
     console.log(newChoiceMonBre);
     
