@@ -8,17 +8,3 @@ $("#submitGrocery").on('click', function(){
 
 })
 
-// var name = "joe"
-// var str = `Hello my name is ${name.repeat(3)}`;
-
-// var obj = {
-//     name: 'joe',
-//     callName: function(){
-//         console.log('this.name is '+ this.name)
-//     }
-// }
-
-// obj.callName()
-
-// console.log(this)
-// alert('hello')
