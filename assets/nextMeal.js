@@ -1,5 +1,5 @@
-var time = 11;
-var day = "Friday";
+var time = 8;
+var day = "Tuesday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
@@ -7,11 +7,16 @@ var format = "dddd";
 nowDate = d.toLocaleDateString()
 var result = moment(nowDate).format(format);
 // var day = result
-console.log("date" + result);
 var hourString = moment(d).format("H");
-//var time = parseFloat(hourString);
+// var time = parseFloat(hourString);
 
-console.log(result);
+var dish = ""
+if (localStorage.getItem("Meal choice") === null){
+    dish = "spaghetti";
+    }
+    else {
+    dish = localStorage.getItem("Meal choice"); 
+    }
 
     //variables for giphy api
     var MondayBreakfastMealChoice = localStorage.getItem("MondayBreakfastMealChoice");
@@ -198,90 +203,287 @@ var instructP = $("<p>");
 if (day === "Monday" && time <= 9) {
     ingredsP.text(MondayBreakfastIngredients);
     instructP.text(MondayBreakfastInstructions[0].steps);
+    if (localStorage.getItem("MondayBreakfastMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = MondayBreakfastMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
 if (day === "Monday" && time <= 15 && time > 9) {
     ingredsP.text(MondayLunchIngredients);
     instructP.text(MondayLunchInstructions[0].steps);
+    if (localStorage.getItem("MondayLunchMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = MondayLunchMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
 if (day === "Monday" && time > 15) {
     ingredsP.text(MondayDinnerIngredients);
     instructP.text(MondayDinnerInstructions[0].steps);
+    if (localStorage.getItem("MondayDinnerMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = MondayDinnerMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
 
 if (day === "Tuesday" && time <= 9) {
     ingredsP.text(TuesdayBreakfastIngredients);
     instructP.text(TuesdayBreakfastInstructions[0].steps);
+    if (localStorage.getItem("TuesdayBreakfastMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = TuesdayBreakfastMealChoice; 
+        }
 }
 if (day === "Tuesday" && time <= 15 && time > 9) {
     ingredsP.text(TuesdayLunchIngredients);
     instructP.text(TuesdayLunchInstructions[0].steps);
+    if (localStorage.getItem("TuesdayLunchMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = TuesdayLunchMealChoice; 
+        }
+    $("#dishName").text(dish);       
 }
+
 if (day === "Tuesday" && time > 15) {
     ingredsP.text(TuesdayDinnerIngredients);
     instructP.text(TuesdayDinnerInstructions[0].steps);
+    if (localStorage.getItem("TuesdayDinnerMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = TuesdayDinnerMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
 
 if (day === "Wednesday" && time <= 9) {
     ingredsP.text(WednesdayBreakfastIngredients);
     instructP.text(WednesdayBreakfastInstructions[0].steps);
+    if (localStorage.getItem("WednesdayBreakfastMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = WednesdayBreakfastMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Wednesday" && time <= 15 && time > 9) {
     ingredsP.text(WednesdayLunchIngredients);
     instructP.text(WednesdayLunchInstructions[0].steps);
+    if (localStorage.getItem("WednesdayLunchMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = WednesdayLunchMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Wednesday" && time > 15) {
     ingredsP.text(WednesdayDinnerIngredients);
     instructP.text(WednesdayDinnerInstructions[0].steps);
+    if (localStorage.getItem("WednesdayDinnerMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = WednesdayDinnerMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Thursday" && time <= 9) {
     ingredsP.text(ThursdayBreakfastIngredients);
     instructP.text(ThursdayBreakfastInstructions[0].steps);
+    if (localStorage.getItem("ThursdayBreakfastMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = ThursdayBreakfastMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Thursday" && (time <= 15 && time > 9)) {
     ingredsP.text(ThursdayLunchIngredients);
     instructP.text(ThursdayLunchInstructions[0].steps);
+    if (localStorage.getItem("ThursdayLunchMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = ThursdayLunchMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Thursday" && time > 15) {
     ingredsP.text(ThursdayDinnerIngredients);
     instructP.text(ThursdayDinnerInstructions[0].steps);
+    if (localStorage.getItem("ThursdayDinnerMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = ThursdayDinnerMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Friday" && time <= 9) {
     ingredsP.text(FridayBreakfastIngredients);
     instructP.text(FridayBreakfastInstructions[0].steps);
+    if (localStorage.getItem("FridayBreakfastMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = FridayBreakfastMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Friday" && time <= 15 && time > 9) {
     ingredsP.text(FridayLunchIngredients);
     instructP.text(FridayLunchInstructions[0].steps);
+    if (localStorage.getItem("FridayLunchMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = FridayLunchMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Friday" && time > 15) {
     ingredsP.text(FridayDinnerIngredients);
     instructP.text(FridayDinnerInstructions[0].steps);
+    if (localStorage.getItem("FridayDinnerMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = FridayDinnerMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Saturday" && time <= 9) {
     ingredsP.text(SaturdayBreakfastIngredients);
     instructP.text(SaturdayBreakfastInstructions[0].steps);
+    if (localStorage.getItem("SaturdayBreakfastMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = SaturdayBreakfastMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Saturday" && time <= 15 && time > 9) {
     ingredsP.text(SaturdayLunchIngredients);
     instructP.text(SaturdayLunchInstructions[0].steps);
+    if (localStorage.getItem("SaturdayLunchMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = SaturdayLunchMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Saturday" && time > 15) {
     ingredsP.text(SaturdayDinnerIngredients);
     instructP.text(SaturdayDinnerInstructions[0].steps);
+    if (localStorage.getItem("SaturdayDinnerMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = SaturdayDinnerMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Sunday" && time <= 9) {
     ingredsP.text(SundayBreakfastIngredients);
     instructP.text(SundayBreakfastInstructions[0].steps);
+    if (localStorage.getItem("SundayBreakfastMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = SundayBreakfastMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Sunday" && time <= 15 && time > 9) {
     ingredsP.text(SundayLunchIngredients);
     instructP.text(SundayLunchInstructions[0].steps);
+    if (localStorage.getItem("SundayLunchMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = SundayLunchMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
+
 if (day === "Sunday" && time > 15) {
     ingredsP.text(SundayDinnerIngredients);
     instructP.text(SundayDinnerInstructions[0].steps);
+    if (localStorage.getItem("SundayDinnerMealChoice") === null){
+        dish = "spaghetti";
+        }
+    else {
+        dish = SundayDinnerMealChoice; 
+        }
+    $("#dishName").text(dish);
 }
 ///Ends if statements
 
 $(".ingredientsList").html(ingredsP);
 $(".instructionsList").html(instructP)
+
+var i = 0;   
+function showGif(){
+  var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
+  $.ajax({
+  url: queryURL,
+  method: "GET"
+  }).then(function(response) {
+  var imageUrl = response.data[i].images.fixed_height.url;
+        var gif = $("<img>");
+        gif.attr("src", imageUrl);
+        gif.attr("alt", "Meal Image");
+        gif.attr("class", "giphy");
+        $("#images").html(gif);
+  });
+}
+
+showGif();
+
+  $("#images").on("click", function(event){
+    event.preventDefault();
+    var newI = i++;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
+  
+    $.ajax({
+  url: queryURL,
+  method: "GET"
+  }).then(function(response) {
+  console.log(newI);
+  var imageUrl = response.data[newI].images.fixed_height.url;
+        var gif = $("<img>");
+        gif.attr("src", imageUrl);
+        gif.attr("alt", "Meal Image");
+        $("#images").html(gif);
+  });
+});

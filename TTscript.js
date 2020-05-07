@@ -18,19 +18,19 @@
 $(document).ready(function() {
   var rat = $("#rat");
 
-  if (localStorage.getItem("Meal choice") === null){
-    var dish = "spaghetti";
-    }
-    else {
-      var dish = localStorage.getItem("Meal choice"); 
-    }
+  // if (localStorage.getItem("Meal choice") === null){
+  //   var dish = "spaghetti";
+  //   }
+  //   else {
+  //     var dish = localStorage.getItem("Meal choice"); 
+  //   }
   
   var chef = localStorage.getItem("Chef for Recipe")
   
 
   $("#dateEl").prepend(new Date().toLocaleDateString());
   $("#chefName").text(chef);
-  $("#dishName").text(dish);
+  // $("#dishName").text(dish);
 
 
   $("#rat").on("click", function(event){
@@ -178,41 +178,41 @@ $(document).ready(function() {
   // });
  
 var i = 0;   
-function showGif(){
-  var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
-  $.ajax({
-  url: queryURL,
-  method: "GET"
-  }).then(function(response) {
-  console.log(response);
-  var imageUrl = response.data[i].images.fixed_height.url;
-        var gif = $("<img>");
-        gif.attr("src", imageUrl);
-        gif.attr("alt", "Meal Image");
-        gif.attr("class", "giphy");
-        $("#images").html(gif);
-  });
-}
+// function showGif(){
+//   var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
+//   $.ajax({
+//   url: queryURL,
+//   method: "GET"
+//   }).then(function(response) {
+//   console.log(response);
+//   var imageUrl = response.data[i].images.fixed_height.url;
+//         var gif = $("<img>");
+//         gif.attr("src", imageUrl);
+//         gif.attr("alt", "Meal Image");
+//         gif.attr("class", "giphy");
+//         $("#images").html(gif);
+//   });
+// }
 
-showGif();
+// showGif();
 
-  $("#images").on("click", function(event){
-    event.preventDefault();
-    var newI = i++;
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
+//   $("#images").on("click", function(event){
+//     event.preventDefault();
+//     var newI = i++;
+//     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
   
-    $.ajax({
-  url: queryURL,
-  method: "GET"
-  }).then(function(response) {
-  console.log(newI);
-  var imageUrl = response.data[newI].images.fixed_height.url;
-        var gif = $("<img>");
-        gif.attr("src", imageUrl);
-        gif.attr("alt", "Meal Image");
-        $("#images").html(gif);
-  });
-});
+//     $.ajax({
+//   url: queryURL,
+//   method: "GET"
+//   }).then(function(response) {
+//   console.log(newI);
+//   var imageUrl = response.data[newI].images.fixed_height.url;
+//         var gif = $("<img>");
+//         gif.attr("src", imageUrl);
+//         gif.attr("alt", "Meal Image");
+//         $("#images").html(gif);
+//   });
+// });
 
 
 }); 
