@@ -105,6 +105,8 @@ if (localStorage.getItem("Meal choice") === null){
 
     var SundayDinnerTitle = localStorage.getItem("SundayDinner");
 
+    //chef local gets
+
     //ingredients local gets
 
     var MondayBreakfastIngredients = localStorage.getItem("MondayBreakfastIngredients");
