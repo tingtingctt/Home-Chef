@@ -1,14 +1,14 @@
-var time = 8;
-var day = "Tuesday";
+// var time = 8;
+// var day = "Tuesday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
 var format = "dddd";
 nowDate = d.toLocaleDateString()
 var result = moment(nowDate).format(format);
-// var day = result
+var day = result
 var hourString = moment(d).format("H");
-// var time = parseFloat(hourString);
+var time = parseFloat(hourString);
 
 var dish = ""
 if (localStorage.getItem("Meal choice") === null){
@@ -85,7 +85,7 @@ if (localStorage.getItem("Meal choice") === null){
 
     var ThursdayLunchTitle = localStorage.getItem("ThursdayLunch");
 
-    var ThursdayLunchTitle = localStorage.getItem("ThursdayDinner");
+    var ThursdayDinnerTitle = localStorage.getItem("ThursdayDinner");
 
     var FridayBreakfastTitle = localStorage.getItem("FridayBreakfast");
 
@@ -210,6 +210,7 @@ if (day === "Monday" && time <= 9) {
         dish = MondayBreakfastMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + MondayBreakfastTitle);
 }
 if (day === "Monday" && time <= 15 && time > 9) {
     ingredsP.text(MondayLunchIngredients);
@@ -221,6 +222,7 @@ if (day === "Monday" && time <= 15 && time > 9) {
         dish = MondayLunchMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + MondayLunchTitle);
 }
 if (day === "Monday" && time > 15) {
     ingredsP.text(MondayDinnerIngredients);
@@ -232,6 +234,7 @@ if (day === "Monday" && time > 15) {
         dish = MondayDinnerMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + MondayDinnerTitle);
 }
 
 if (day === "Tuesday" && time <= 9) {
@@ -243,7 +246,10 @@ if (day === "Tuesday" && time <= 9) {
     else {
         dish = TuesdayBreakfastMealChoice; 
         }
+        $("#dishName").text(dish);
+        $(".mealText").html("&nbsp;" + TuesdayBreakfastTitle);
 }
+
 if (day === "Tuesday" && time <= 15 && time > 9) {
     ingredsP.text(TuesdayLunchIngredients);
     instructP.text(TuesdayLunchInstructions[0].steps);
@@ -253,7 +259,8 @@ if (day === "Tuesday" && time <= 15 && time > 9) {
     else {
         dish = TuesdayLunchMealChoice; 
         }
-    $("#dishName").text(dish);       
+    $("#dishName").text(dish); 
+    $(".mealText").html("&nbsp;" + TuesdayLunchTitle);      
 }
 
 if (day === "Tuesday" && time > 15) {
@@ -266,6 +273,7 @@ if (day === "Tuesday" && time > 15) {
         dish = TuesdayDinnerMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + TuesdayDinnerTitle);
 }
 
 if (day === "Wednesday" && time <= 9) {
@@ -278,6 +286,7 @@ if (day === "Wednesday" && time <= 9) {
         dish = WednesdayBreakfastMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + WednesdayBreakfastTitle);
 }
 
 if (day === "Wednesday" && time <= 15 && time > 9) {
@@ -290,6 +299,7 @@ if (day === "Wednesday" && time <= 15 && time > 9) {
         dish = WednesdayLunchMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + WednesdayLunchTitle);
 }
 
 if (day === "Wednesday" && time > 15) {
@@ -302,6 +312,7 @@ if (day === "Wednesday" && time > 15) {
         dish = WednesdayDinnerMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + WednesdayDinnerTitle);
 }
 
 if (day === "Thursday" && time <= 9) {
@@ -314,6 +325,7 @@ if (day === "Thursday" && time <= 9) {
         dish = ThursdayBreakfastMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + ThursdayBreakfastTitle);
 }
 
 if (day === "Thursday" && (time <= 15 && time > 9)) {
@@ -326,6 +338,7 @@ if (day === "Thursday" && (time <= 15 && time > 9)) {
         dish = ThursdayLunchMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + ThursdayLunchTitle );
 }
 
 if (day === "Thursday" && time > 15) {
@@ -338,6 +351,7 @@ if (day === "Thursday" && time > 15) {
         dish = ThursdayDinnerMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + ThursdayDinnerTitle);
 }
 
 if (day === "Friday" && time <= 9) {
@@ -350,6 +364,7 @@ if (day === "Friday" && time <= 9) {
         dish = FridayBreakfastMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + FridayBreakfastTitle);
 }
 
 if (day === "Friday" && time <= 15 && time > 9) {
@@ -362,6 +377,7 @@ if (day === "Friday" && time <= 15 && time > 9) {
         dish = FridayLunchMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + FridayLunchTitle);
 }
 
 if (day === "Friday" && time > 15) {
@@ -374,6 +390,7 @@ if (day === "Friday" && time > 15) {
         dish = FridayDinnerMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + FridayDinnerTitle);
 }
 
 if (day === "Saturday" && time <= 9) {
@@ -386,6 +403,7 @@ if (day === "Saturday" && time <= 9) {
         dish = SaturdayBreakfastMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + SaturdayBreakfastTitle);
 }
 
 if (day === "Saturday" && time <= 15 && time > 9) {
@@ -398,6 +416,7 @@ if (day === "Saturday" && time <= 15 && time > 9) {
         dish = SaturdayLunchMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + SaturdayLunchTitle);
 }
 
 if (day === "Saturday" && time > 15) {
@@ -410,6 +429,7 @@ if (day === "Saturday" && time > 15) {
         dish = SaturdayDinnerMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + SaturdayDinnerTitle);
 }
 
 if (day === "Sunday" && time <= 9) {
@@ -422,6 +442,7 @@ if (day === "Sunday" && time <= 9) {
         dish = SundayBreakfastMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + SundayBreakfastTitle);
 }
 
 if (day === "Sunday" && time <= 15 && time > 9) {
@@ -434,6 +455,7 @@ if (day === "Sunday" && time <= 15 && time > 9) {
         dish = SundayLunchMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + SundayLunchTitle);
 }
 
 if (day === "Sunday" && time > 15) {
@@ -446,6 +468,7 @@ if (day === "Sunday" && time > 15) {
         dish = SundayDinnerMealChoice; 
         }
     $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + SundayDinnerTitle);
 }
 ///Ends if statements
 
