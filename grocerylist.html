@@ -11,13 +11,9 @@
     
 </head>
 
-
-
-
-
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url(https://files.123freevectors.com/wp-content/original/110440-black-and-blue-blurred-background-vector.jpg);" id="navigation">
+    <nav class="navbar navbar-expand-lg" id="navigation">
         <!-- <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,34 +30,19 @@
         </div>
     </nav>
 
-<h1>Grocery List</h1>
+<h1 style='text-align:center'>Grocery List</h1>
+<div id="listContainer" class="container">
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Add your ingredient(s) or needed groceries here!" id="groceryInput" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" id="submitGrocery">Add My Item!</button>
+    </div>
+</div>
 
-    <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- checkboxes -->
-<input type="checkbox" id="vehicle1" name="vehicle1" value="item1">
-<label for="vehicle1"> Sugar</label><br>
-<input type="checkbox" id="vehicle2" name="vehicle2" value="item2">
-<label for="vehicle2"> Spice</label><br>
-<input type="checkbox" id="vehicle3" name="vehicle3" value="item3">
-<label for="vehicle3"> Everything nice</label><br>
 
 <!-- input button -->
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Add your ingredient(s) or needed groceries here!" aria-label="Recipient's username" aria-describedby="button-addon2">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add My Item!</button>
-    </div>
 
 
-
-
+<script src="partyjs.js"></script>
 </body>
 </html>
