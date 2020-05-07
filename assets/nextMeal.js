@@ -1,43 +1,59 @@
-// var time = 11;
-// var day = "Wednesday";
+var time = 11;
+var day = "Friday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
 var format = "dddd";
 nowDate = d.toLocaleDateString()
 var result = moment(nowDate).format(format);
-var day = result
+// var day = result
 console.log("date" + result);
 var hourString = moment(d).format("H");
-time = parseFloat(hourString);
+//var time = parseFloat(hourString);
+
+console.log(result);
 
     //variables for giphy api
     var MondayBreakfastMealChoice = localStorage.getItem("MondayBreakfastMealChoice");
+
     var MondayLunchMealChoice = localStorage.getItem("MondayLunchMealChoice");
+
     var MondayDinnerMealChoice = localStorage.getItem("MondayDinnerMealChoice");
 
     var TuesdayBreakfastMealChoice = localStorage.getItem("TuesdayBreakfastMealChoice");
+
     var TuesdayLunchMealChoice = localStorage.getItem("TuesdayLunchMealChoice");
+
     var TuesdayDinnerMealChoice = localStorage.getItem("TuesdayDinnerMealChoice");
 
     var WednesdayBreakfastMealChoice = localStorage.getItem("WednesdayBreakfastMealChoice");
+
     var WednesdayLunchMealChoice = localStorage.getItem("WednesdayLunchMealChoice");
+
     var WednesdayDinnerMealChoice = localStorage.getItem("WednesdayDinnerMealChoice");
 
     var ThursdayBreakfastMealChoice = localStorage.getItem("ThursdayBreakfastMealChoice");
+
     var ThursdayLunchMealChoice = localStorage.getItem("ThursdayLunchMealChoice");
+
     var ThursdayDinnerMealChoice = localStorage.getItem("ThursdayDinnerMealChoice");
 
     var FridayBreakfastMealChoice = localStorage.getItem("FridayBreakfastMealChoice");
+
     var FridayLunchMealChoice = localStorage.getItem("FridayLunchMealChoice");
+
     var FridayDinnerMealChoice = localStorage.getItem("FridayDinnerMealChoice");
 
     var SaturdayBreakfastMealChoice = localStorage.getItem("SaturdayBreakfastMealChoice");
+
     var SaturdayLunchMealChoice = localStorage.getItem("SaturdayLunchMealChoice");
+
     var SaturdayDinnerMealChoice = localStorage.getItem("SaturdayDinnerMealChoice");
 
     var SundayBreakfastMealChoice = localStorage.getItem("SundayBreakfastMealChoice");
+
     var SundayLunchMealChoice = localStorage.getItem("SundayLunchMealChoice");
+
     var SundayDinnerMealChoice = localStorage.getItem("SundayDinnerMealChoice");
    
 
@@ -152,7 +168,7 @@ time = parseFloat(hourString);
 
     var ThursdayLunchInstructions = JSON.parse(localStorage.getItem("ThursdayLunchInstructions"));
 
-    var ThursdayLunchInstructions = JSON.parse(localStorage.getItem("ThursdayDinnerInstructions"));
+    var ThursdayDinnerInstructions = JSON.parse(localStorage.getItem("ThursdayDinnerInstructions"));
 
     var FridayBreakfastInstructions = JSON.parse(localStorage.getItem("FridayBreakfastInstructions"));
 
@@ -172,7 +188,7 @@ time = parseFloat(hourString);
 
     var SundayDinnerInstructions = JSON.parse(localStorage.getItem("SundayDinnerInstructions"));
 
-    //this takes the recipe from the local storage
+    //this preps to put the text into empty p tags
 
 var ingredsP = $("<p>");
 var instructP = $("<p>");
@@ -221,7 +237,7 @@ if (day === "Thursday" && time <= 9) {
     ingredsP.text(ThursdayBreakfastIngredients);
     instructP.text(ThursdayBreakfastInstructions[0].steps);
 }
-if (day === "Thursday" && time <= 15 && time > 9) {
+if (day === "Thursday" && (time <= 15 && time > 9)) {
     ingredsP.text(ThursdayLunchIngredients);
     instructP.text(ThursdayLunchInstructions[0].steps);
 }
