@@ -129,7 +129,7 @@ if (localStorage.getItem("Meal choice") === null){
 
     var ThursdayLunchIngredients = localStorage.getItem("ThursdayLunchIngredients");
 
-    var ThursdayLunchIngredients = localStorage.getItem("ThursdayDinnerIngredients");
+    var ThursdayDinnerIngredients = localStorage.getItem("ThursdayDinnerIngredients");
 
     var FridayBreakfastIngredients = localStorage.getItem("FridayBreakfastIngredients");
 
