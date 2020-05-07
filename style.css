@@ -1,4 +1,74 @@
 
+/* #rat display:none */
+
+#fooddiv {
+    position:relative;
+}
+
+#who {
+    position: absolute; 
+    top:50%; 
+    right: 0; 
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+#selectavatar {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+#selectmickey {
+    height: 120px;
+    position:absolute;
+    top:30%; 
+    left: 20%;
+}
+
+#selectmickey:hover {
+    height: 200px;
+}
+
+#selectrat {
+    height: 120px;
+    position:absolute;
+    top:30%; 
+    left: 34%;
+}
+
+#selectrat:hover {
+    height: 200px;
+}
+
+#selectbob {
+    height: 120px;
+    position:absolute;
+    top:30%; 
+    left: 53%;
+}
+
+#selectbob:hover {
+    height: 200px;
+}
+
+#selectgustav {
+    height: 120px;
+    position:absolute;
+    top:30%; 
+    left: 75%;
+}
+
+#selectgustav:hover {
+    height: 200px;
+}
+
+h2:hover {
+    font-size: 33px;
+}
+
 /*---------- TT's CSS Section in progress --------------*/
 body{
     background-color: rgb(252, 252, 252);
@@ -39,6 +109,7 @@ hr{
     /* animation: run 10s infinite; */
     top:5px; 
     left: 0px;
+    display: none;
 }
 
 @keyframes run {
