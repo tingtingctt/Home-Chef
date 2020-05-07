@@ -6,7 +6,7 @@
 $(document).ready(function() {
   var rat = $("#rat");
 
-
+// ----------------------------- settings ---------------------------------
   $("#who").on("click", function(event){
     event.preventDefault();
     $("#selectavatar").attr("style", "display: block");
@@ -43,13 +43,26 @@ $(document).ready(function() {
   }); 
 
 
+  // ------------------ Avatar animation ---------------------
+
+  $("#rat").on("click", function(event){
+    for (i=0; i<5; i++){
+      event.preventDefault();
+      rat.animate ({
+        top: (Math.random() * 800),
+        left:  (Math.random() * 1500),
+      }, 1000);
+    }
+  });
+
+// ------------------ scroll up and down ---------------------
   
   var chef = localStorage.getItem("Chef for Recipe")
   
 
   $("#dateEl").prepend(new Date().toLocaleDateString());
-  $("#chefName").text(chef);
-  // $("#dishName").text(dish);
+
+
 
   $("#collapse").on("click", function(event){
     event.preventDefault();
@@ -65,53 +78,65 @@ $(document).ready(function() {
   }, 2000);
   });
 
+// ---------------- Anna's local storage -------------------------
 
-  $("#rat").on("click", function(event){
-    for (i=0; i<5; i++){
-      event.preventDefault();
-      rat.animate ({
-        top: (Math.random() * 800),
-        left:  (Math.random() * 1500),
-      }, 1000);
+  if (localStorage.getItem("Meal choice") === null){
+    var dish = "spaghetti";
     }
+    else {
+      var dish = localStorage.getItem("Meal choice"); 
+    }
+  
+  var chef = localStorage.getItem("Chef for Recipe")
+  
+
+  $("#dateEl").prepend(new Date().toLocaleDateString());
+  $("#chefName").text(chef);
+  $("#dishName").text(dish);
+
+
+
+  // ---------------- Food Giphy with clicks to change gif images -------------------
+
+  var i = 0;   
+  function showGif(){
+  var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
+  $.ajax({
+  url: queryURL,
+  method: "GET"
+  }).then(function(response) {
+  console.log(response);
+  var imageUrl = response.data[i].images.fixed_height.url;
+        var gif = $("<img>");
+        gif.attr("src", imageUrl);
+        gif.attr("alt", "Meal Image");
+        gif.attr("class", "giphy");
+        $("#images").html(gif);
   });
+}
 
+showGif();
 
-  $("#tomato").on("click", function(event){
+  $("#images").on("click", function(event){
     event.preventDefault();
-    $("body").attr("style","background-image: url('assets/TT Images/italian.png')")
+    var newI = i++;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
+  
+    $.ajax({
+  url: queryURL,
+  method: "GET"
+  }).then(function(response) {
+  console.log(newI);
+  var imageUrl = response.data[newI].images.fixed_height.url;
+        var gif = $("<img>");
+        gif.attr("src", imageUrl);
+        gif.attr("alt", "Meal Image");
+        $("#images").html(gif);
   });
+});
 
-  $("#lettuce").on("click", function(event){
-    event.preventDefault();
-    $("body").attr("style","background-image: url('assets/TT Images/embroidery.png')")
-  });
 
-  $("#milk").on("click", function(event){
-    event.preventDefault();
-    $("body").attr("style", "background-image: url('assets/TT Images/color grid 3.png')")
-  });
-
-  $("#squid").on("click", function(event){
-    event.preventDefault();
-    $("body").attr("style","background-image: url('assets/TT Images/kid.jpg')")
-  });
-
-  $("#banana").on("click", function(event){
-    event.preventDefault();
-    $("body").attr("style","background-image: url('assets/TT Images/wood.jpg')")
-  });
-
-  $("#eggplant").on("click", function(event){
-    event.preventDefault();
-    $("body").attr("style","background-image: url('assets/TT Images/marble.png')")
-  });
-
-  $("#wine").on("click", function(event){
-    event.preventDefault();
-    $("body").attr("style","background-image: url('assets/TT Images/bamboo.png')");
-  });
-
+  // ------------------ chef's superpower --------------------
 
   $(".chef").on("click",function() {
     $("#wine").css({height:"10px", left:0, top: '-10px'});
@@ -165,6 +190,114 @@ $(document).ready(function() {
   })
 
 
+// -------------------- click to change placemat (background image) ----------------------
+
+
+  $("#tomato").on("click", function(event){
+    event.preventDefault();
+    $("body").attr("style","background-image: url('assets/TT Images/italian.png')")
+  });
+
+  $("#lettuce").on("click", function(event){
+    event.preventDefault();
+    $("body").attr("style","background-image: url('assets/TT Images/embroidery.png')")
+  });
+
+  $("#milk").on("click", function(event){
+    event.preventDefault();
+    $("body").attr("style", "background-image: url('assets/TT Images/color grid 3.png')")
+  });
+
+  $("#squid").on("click", function(event){
+    event.preventDefault();
+    $("body").attr("style","background-image: url('assets/TT Images/kid.jpg')")
+  });
+
+  $("#banana").on("click", function(event){
+    event.preventDefault();
+    $("body").attr("style","background-image: url('assets/TT Images/wood.jpg')")
+  });
+
+  $("#eggplant").on("click", function(event){
+    event.preventDefault();
+    $("body").attr("style","background-image: url('assets/TT Images/marble.png')")
+  });
+
+  $("#wine").on("click", function(event){
+    event.preventDefault();
+    $("body").attr("style","background-image: url('assets/TT Images/bamboo.png')");
+  });
+
+
+  // ----------- Virtual Garden -------------
+
+  $("#gardenbtn").on("click", function(event){
+    event.preventDefault();
+    $("#whiteout").attr("style", "display: block");
+  }); 
+
+  $("#exit").on("click", function(event){
+    event.preventDefault();
+    $("#whiteout").attr("style", "display: none");
+  }); 
+
+  $("#weed1").on("click", function(event){
+    event.preventDefault();
+  $("#weed1").animate({
+    height: '+=30px',
+    top: '-=30px', 
+    left: '-=15px', 
+  }, 500);
+  }); 
+
+  $("#weed2").on("click", function(event){
+    event.preventDefault();
+  $("#weed2").animate({
+    height: '+=30px',
+    top: '-=30px',
+    left: '-=15px', 
+  }, 500);
+  }); 
+
+  $("#mushroom1").on("click", function(event){
+    event.preventDefault();
+  $("#mushroom1").animate({
+    height: '+=30px',
+    top: '-=30px',
+    left: '-=15px', 
+  }, 500);
+  }); 
+
+  $("#mushroom2").on("click", function(event){
+    event.preventDefault();
+  $("#mushroom2").animate({
+    height: '+=30px',
+    top: '-=30px',
+    left: '-=15px', 
+  }, 500);
+  }); 
+
+
+  // $.fn.animateRotate = function(angle, duration, easing, complete) {
+  //   return this.each(function() {
+  //     var $elem = $(this);
+  
+  //     $({deg: 0}).animate({deg: angle}, {
+  //       duration: duration,
+  //       easing: easing,
+  //       step: function(now) {
+  //         $elem.css({
+  //            transform: 'rotate(' + now + 'deg)'
+  //          });
+  //       },
+  //       complete: complete || $.noop
+  //     });
+  //   });
+  // };
+  
+  // $('#gardendiv').animateRotate(90);
+
+
 //   function loop() {
 //       rat.css({height:"10px", left:0});
 //       rat.animate ({
@@ -204,13 +337,12 @@ $(document).ready(function() {
   //   case 82:
   //     rat.attr("style", "animation: run 10s 1");
 
-
   //   default:
   //     break;
   //   }
   // });
  
-var i = 0;   
+// var i = 0;   
 // function showGif(){
 //   var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
 //   $.ajax({
