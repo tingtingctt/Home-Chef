@@ -43,15 +43,6 @@ $(document).ready(function() {
   }); 
 
 
-
-
-  if (localStorage.getItem("Meal choice") === null){
-    var dish = "spaghetti";
-    }
-    else {
-      var dish = localStorage.getItem("Meal choice"); 
-    }
-
   
   var chef = localStorage.getItem("Chef for Recipe")
   

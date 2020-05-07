@@ -51,3 +51,7 @@ h4:hover{
 .btn:hover{
     background-color: hsla(0, 50%, 49%, 1);
 }
+
+a {
+    color: hsla(0, 50%, 49%, 1);
+}
