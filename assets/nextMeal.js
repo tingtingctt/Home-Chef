@@ -1,22 +1,17 @@
 // var time = 8;
-var day = "Saturday";
+// var day = "Saturday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
 var format = "dddd";
 nowDate = d.toLocaleDateString()
 var result = moment(nowDate).format(format);
-// var day = result
+var day = result
 var hourString = moment(d).format("H");
 var time = parseFloat(hourString);
 
 var dish = ""
-if (localStorage.getItem("Meal choice") === null){
-    dish = "spaghetti";
-    }
-    else {
-    dish = localStorage.getItem("Meal choice"); 
-    }
+var chef = ""
 
     //variables for giphy api
     var MondayBreakfastMealChoice = localStorage.getItem("MondayBreakfastMealChoice");
@@ -106,6 +101,52 @@ if (localStorage.getItem("Meal choice") === null){
     var SundayDinnerTitle = localStorage.getItem("SundayDinner");
 
     //chef local gets
+
+    var MondayBreakfastChef = localStorage.getItem("MondayBreakfastChefChoice");
+    
+    var MondayLunchChef = localStorage.getItem("MondayLunchChefChoice");
+    
+    var MondayDinnerChef = localStorage.getItem("MondayDinnerChefChoice");
+
+    var TuesdayBreakfastChef = localStorage.getItem("TuesdayBreakfastChefChoice");
+    
+    var TuesdayLunchChef = localStorage.getItem("TuesdayLunchChefChoice");
+    
+    var TuesdayDinnerChef = localStorage.getItem("TuesdayDinnerChefChoice");
+
+    var WednesdayBreakfastChef = localStorage.getItem("WednesdayBreakfastChefChoice");
+    
+    var WednesdayLunchChef = localStorage.getItem("WednesdayLunchChefChoice");
+    
+    var WednesdayDinnerChef = localStorage.getItem("WednesdayDinnerChefChoice");
+
+    var ThursdayBreakfastChef = localStorage.getItem("ThursdayBreakfastChefChoice");
+    
+    var ThursdayLunchChef = localStorage.getItem("ThursdayLunchChefChoice");
+    
+    var ThursdayDinnerChef = localStorage.getItem("ThursdayDinnerChefChoice");
+
+    var FridayBreakfastChef = localStorage.getItem("FridayBreakfastChefChoice");
+    
+    var FridayLunchChef = localStorage.getItem("FridayLunchChefChoice");
+    
+    var FridayDinnerChef = localStorage.getItem("FridayDinnerChefChoice");
+
+    var SaturdayBreakfastChef = localStorage.getItem("SaturdayBreakfastChefChoice");
+    
+    var SaturdayLunchChef = localStorage.getItem("SaturdayLunchChefChoice");
+    
+    var SaturdayDinnerChef = localStorage.getItem("SaturdayDinnerChefChoice");
+
+    var SundayBreakfastChef = localStorage.getItem("SundayBreakfastChefChoice");
+    
+    var SundayLunchChef = localStorage.getItem("SundayLunchChefChoice");
+    
+    var SundayDinnerChef = localStorage.getItem("SundayDinnerChefChoice");
+
+    
+
+
 
     //ingredients local gets
 
@@ -205,273 +246,443 @@ var instructP = $("<p>");
 if (day === "Monday" && time <= 9) {
     ingredsP.text(MondayBreakfastIngredients);
     instructP.text(MondayBreakfastInstructions[0].steps);
-    if (localStorage.getItem("MondayBreakfastMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = MondayBreakfastMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + MondayBreakfastTitle);
+    $("#chefName").text("Chef: " + MondayBreakfastChef);
+    if (MondayBreakfastChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (MondayBreakfastChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (MondayBreakfastChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (MondayBreakfastChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 if (day === "Monday" && time <= 15 && time > 9) {
     ingredsP.text(MondayLunchIngredients);
     instructP.text(MondayLunchInstructions[0].steps);
-    if (localStorage.getItem("MondayLunchMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = MondayLunchMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + MondayLunchTitle);
+    $("#chefName").text("Chef: " + MondayLunchChef);
+    if (MondayLunchChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (MondayLunchChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (MondayLunchChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (MondayLunchChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
+
 }
 if (day === "Monday" && time > 15) {
     ingredsP.text(MondayDinnerIngredients);
     instructP.text(MondayDinnerInstructions[0].steps);
-    if (localStorage.getItem("MondayDinnerMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = MondayDinnerMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + MondayDinnerTitle);
+    $("#chefName").text("Chef: " + MondayDinnerChef);
+    if (MondayDinnerChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (MondayDinnerChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (MondayDinnerChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (MondayDinnerChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Tuesday" && time <= 9) {
     ingredsP.text(TuesdayBreakfastIngredients);
     instructP.text(TuesdayBreakfastInstructions[0].steps);
-    if (localStorage.getItem("TuesdayBreakfastMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = TuesdayBreakfastMealChoice; 
-        }
-        $("#dishName").text(dish);
-        $(".mealText").html("&nbsp;" + TuesdayBreakfastTitle);
+    $("#dishName").text(dish);
+    $(".mealText").html("&nbsp;" + TuesdayBreakfastTitle);
+    $("#chefName").text("Chef: " + TuesdayBreakfastChef);
+    if (TuesdayBreakfastChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (TuesdayBreakfastChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (TuesdayBreakfastChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (TuesdayBreakfastChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Tuesday" && time <= 15 && time > 9) {
     ingredsP.text(TuesdayLunchIngredients);
     instructP.text(TuesdayLunchInstructions[0].steps);
-    if (localStorage.getItem("TuesdayLunchMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = TuesdayLunchMealChoice; 
-        }
     $("#dishName").text(dish); 
-    $(".mealText").html("&nbsp;" + TuesdayLunchTitle);      
+    $(".mealText").html("&nbsp;" + TuesdayLunchTitle);    
+    $("#chefName").text("Chef: " + TuesdayLunchChef);
+    if (TuesdayLunchChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (TuesdayLunchChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (TuesdayLunchChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (TuesdayLunchChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Tuesday" && time > 15) {
     ingredsP.text(TuesdayDinnerIngredients);
     instructP.text(TuesdayDinnerInstructions[0].steps);
-    if (localStorage.getItem("TuesdayDinnerMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = TuesdayDinnerMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + TuesdayDinnerTitle);
+    $("#chefName").text("Chef: " + TuesdayDinnerChef);
+    if (TuesdayDinnerChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (TuesdayDinnerChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (TuesdayDinnerChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (TuesdayDinnerChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
+
 
 if (day === "Wednesday" && time <= 9) {
     ingredsP.text(WednesdayBreakfastIngredients);
     instructP.text(WednesdayBreakfastInstructions[0].steps);
-    if (localStorage.getItem("WednesdayBreakfastMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = WednesdayBreakfastMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + WednesdayBreakfastTitle);
+    $("#chefName").text("Chef: " + WednesdayBreakfastChef);
+    if (WednesdayBreakfastChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (WednesdayBreakfastChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (WednesdayBreakfastChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (WednesdayBreakfastChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
+}
 }
 
 if (day === "Wednesday" && time <= 15 && time > 9) {
     ingredsP.text(WednesdayLunchIngredients);
     instructP.text(WednesdayLunchInstructions[0].steps);
-    if (localStorage.getItem("WednesdayLunchMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = WednesdayLunchMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + WednesdayLunchTitle);
+    $("#chefName").text("Chef: " + WednesdayLunchChef);
+    if (WednesdayLunchChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (WednesdayLunchChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (WednesdayLunchChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (WednesdayLunchChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Wednesday" && time > 15) {
     ingredsP.text(WednesdayDinnerIngredients);
     instructP.text(WednesdayDinnerInstructions[0].steps);
-    if (localStorage.getItem("WednesdayDinnerMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = WednesdayDinnerMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + WednesdayDinnerTitle);
+    $("#chefName").text("Chef: " + WednesdayDinnerChef);
+    if (WednesdayDinnerChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (WednesdayDinnerChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (WednesdayDinnerChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (WednesdayDinnerChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Thursday" && time <= 9) {
     ingredsP.text(ThursdayBreakfastIngredients);
     instructP.text(ThursdayBreakfastInstructions[0].steps);
-    if (localStorage.getItem("ThursdayBreakfastMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = ThursdayBreakfastMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + ThursdayBreakfastTitle);
+    $("#chefName").text("Chef: " + ThursdayBreakfastChef);
+    if (ThursdayBreakfastChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (ThursdayBreakfastChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (ThursdayBreakfastChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (ThursdayBreakfastChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Thursday" && (time <= 15 && time > 9)) {
     ingredsP.text(ThursdayLunchIngredients);
     instructP.text(ThursdayLunchInstructions[0].steps);
-    if (localStorage.getItem("ThursdayLunchMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = ThursdayLunchMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + ThursdayLunchTitle );
+    $("#chefName").text("Chef: " + ThursdayLunchChef);
+    if (ThursdayLunchChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    if (ThursdayLunchChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    if (ThursdayLunchChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    if (ThursdayLunchChef === "Tingting"){
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
+}
 }
 
 if (day === "Thursday" && time > 15) {
     ingredsP.text(ThursdayDinnerIngredients);
-    console.log(ThursdayDinnerInstructions[0].steps)
     instructP.text(ThursdayDinnerInstructions[0].steps);
-    if (localStorage.getItem("ThursdayDinnerMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = ThursdayDinnerMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + ThursdayDinnerTitle);
+    $("#chefName").text("Chef: " + ThursdayDinnerChef);
+    if (ThursdayDinnerChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (ThursdayDinnerChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(ThursdayDinnerChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (ThursdayDinnerChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
-
 if (day === "Friday" && time <= 9) {
     ingredsP.text(FridayBreakfastIngredients);
     instructP.text(FridayBreakfastInstructions[0].steps);
-    if (localStorage.getItem("FridayBreakfastMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = FridayBreakfastMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + FridayBreakfastTitle);
+    $("#chefName").text("Chef: " + FridayBreakfastChef);
+    if (FridayBreakfastChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (FridayBreakfastChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(FridayBreakfastChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (FridayBreakfastChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Friday" && time <= 15 && time > 9) {
     ingredsP.text(FridayLunchIngredients);
     instructP.text(FridayLunchInstructions[0].steps);
-    if (localStorage.getItem("FridayLunchMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = FridayLunchMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + FridayLunchTitle);
+    $("#chefName").text("Chef: " + FridayLunchChef);
+    if (FridayLunchChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (FridayLunchChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(FridayLunchChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (FridayLunchChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Friday" && time > 15) {
     ingredsP.text(FridayDinnerIngredients);
     instructP.text(FridayDinnerInstructions[0].steps);
-    if (localStorage.getItem("FridayDinnerMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = FridayDinnerMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + FridayDinnerTitle);
+    $("#chefName").text("Chef: " + FridayDinnerChef);
+    if (FridayDinnerChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (FridayDinnerChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(FridayDinnerChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (FridayDinnerChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Saturday" && time <= 9) {
     ingredsP.text(SaturdayBreakfastIngredients);
     instructP.text(SaturdayBreakfastInstructions[0].steps);
-    if (localStorage.getItem("SaturdayBreakfastMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = SaturdayBreakfastMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SaturdayBreakfastTitle);
+    $("#chefName").text("Chef: " + SaturdayBreakfastChef);
+    if (SaturdayBreakfastChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (SaturdayBreakfastChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(SaturdayBreakfastChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (SaturdayBreakfastChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Saturday" && time <= 15 && time > 9) {
     ingredsP.text(SaturdayLunchIngredients);
     instructP.text(SaturdayLunchInstructions[0].steps);
-    if (localStorage.getItem("SaturdayLunchMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = SaturdayLunchMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SaturdayLunchTitle);
+    $("#chefName").text("Chef: " + SaturdayLunchChef);
+    if (SaturdayLunchChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (SaturdayLunchChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(SaturdayLunchChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (SaturdayLunchChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Saturday" && time > 15) {
     ingredsP.text(SaturdayDinnerIngredients);
     instructP.text(SaturdayDinnerInstructions[0].steps);
-    if (localStorage.getItem("SaturdayDinnerMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = SaturdayDinnerMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SaturdayDinnerTitle);
+    $("#chefName").text("Chef: " + SaturdayDinnerChef);
+    if (SaturdayDinnerChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (SaturdayDinnerChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(SaturdayDinnerChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (SaturdayDinnerChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Sunday" && time <= 9) {
     ingredsP.text(SundayBreakfastIngredients);
     instructP.text(SundayBreakfastInstructions[0].steps);
-    if (localStorage.getItem("SundayBreakfastMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = SundayBreakfastMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SundayBreakfastTitle);
+    $("#chefName").text("Chef: " + SundayBreakfastChef);
+    if (SundayBreakfastChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (SundayBreakfastChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(SundayBreakfastChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (SundayBreakfastChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Sunday" && time <= 15 && time > 9) {
     ingredsP.text(SundayLunchIngredients);
     instructP.text(SundayLunchInstructions[0].steps);
-    if (localStorage.getItem("SundayLunchMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = SundayLunchMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SundayLunchTitle);
+    $("#chefName").text("Chef: " + SundayLunchChef);
+    if (SundayLunchChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (SundayLunchChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(SundayLunchChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (SundayLunchChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 
 if (day === "Sunday" && time > 15) {
     ingredsP.text(SundayDinnerIngredients);
     instructP.text(SundayDinnerInstructions[0].steps);
-    if (localStorage.getItem("SundayDinnerMealChoice") === null){
-        dish = "spaghetti";
-        }
-    else {
         dish = SundayDinnerMealChoice; 
-        }
     $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SundayDinnerTitle);
+    $("#chefName").text("Chef: " + SundayDinnerChef);
+    if (SundayDinnerChef === "Joe"){
+        $(".chef").attr("src", "assets/TT Images/joechef.png")
+    }
+    else if (SundayDinnerChef === "Anna"){
+        $(".chef").attr("src", "assets/TT Images/annachef.png")
+    }
+    else if(SundayDinnerChef === "Oleksandr"){
+        $(".chef").attr("src", "assets/TT Images/alexchef.png")
+    }
+    else if (SundayDinnerChef === "Tingting") {
+        $(".chef").attr("src", "assets/TT Images/ttchef.png")
+    }
 }
 ///Ends if statements
 
@@ -496,8 +707,9 @@ function showGif(){
 
 showGif();
 
-  $("#images").on("click", function(event){
+$("#images").on("click", function(event){
     event.preventDefault();
+
     var newI = i++;
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
   
@@ -505,7 +717,6 @@ showGif();
   url: queryURL,
   method: "GET"
   }).then(function(response) {
-  console.log(newI);
   var imageUrl = response.data[newI].images.fixed_height.url;
         var gif = $("<img>");
         gif.attr("src", imageUrl);
