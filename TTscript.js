@@ -140,7 +140,7 @@ $(document).ready(function() {
 
   // to close chef superpower
   $(document).click(function(event){
-    event.preventDefault();
+    // event.preventDefault();
     $(".confetti").attr("style", "display: none");
   });
 
@@ -237,7 +237,7 @@ $(document).ready(function() {
 
     // to close virtual garden
     $(document).click(function(event){
-      event.preventDefault();
+      // event.preventDefault();
       $("#whiteout").attr("style", "display: none");
     });
 

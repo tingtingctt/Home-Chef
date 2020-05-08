@@ -31,7 +31,6 @@ $(".mealBtn").on("click", function(event) {
     
     $.ajax(settings).done(function (response) {
         var results = JSON.parse(response);
-        console.log(results)
         for (i = 0; i < results.results.length; i++ ) {
             var newP = $("<p>");
             var link = $("<a>");
@@ -67,7 +66,10 @@ $(".urlBtn").on("click", function(event) {
     }
     
     $.ajax(settings).done(function (response) {
-
+        console.log(response);
+        console.log(response[0].name);
+        console.log(response[0].ingredients);
+        console.log(response[0].instructions);
 
         recipeTitle = response[0].name
         recipeIngredients = response[0].ingredients
