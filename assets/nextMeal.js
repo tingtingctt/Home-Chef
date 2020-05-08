@@ -1,3 +1,5 @@
+//use these variables to check that it works. Make sure that you comment out the later var day and time on line 13 and 11
+
 // var time = 8;
 // var day = "Monday";
 
@@ -247,7 +249,6 @@ if (day === "Monday" && time <= 9) {
     ingredsP.text(MondayBreakfastIngredients);
     instructP.text(MondayBreakfastInstructions[0].steps);
         dish = MondayBreakfastMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + MondayBreakfastTitle);
     $("#chefName").text("Chef: " + MondayBreakfastChef);
     if (MondayBreakfastChef === "Joe"){
@@ -267,7 +268,6 @@ if (day === "Monday" && time <= 15 && time > 9) {
     ingredsP.text(MondayLunchIngredients);
     instructP.text(MondayLunchInstructions[0].steps);
         dish = MondayLunchMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + MondayLunchTitle);
     $("#chefName").text("Chef: " + MondayLunchChef);
     if (MondayLunchChef === "Joe"){
@@ -289,7 +289,6 @@ if (day === "Monday" && time > 15) {
     ingredsP.text(MondayDinnerIngredients);
     instructP.text(MondayDinnerInstructions[0].steps);
         dish = MondayDinnerMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + MondayDinnerTitle);
     $("#chefName").text("Chef: " + MondayDinnerChef);
     if (MondayDinnerChef === "Joe"){
@@ -310,7 +309,6 @@ if (day === "Tuesday" && time <= 9) {
     ingredsP.text(TuesdayBreakfastIngredients);
     instructP.text(TuesdayBreakfastInstructions[0].steps);
         dish = TuesdayBreakfastMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + TuesdayBreakfastTitle);
     $("#chefName").text("Chef: " + TuesdayBreakfastChef);
     if (TuesdayBreakfastChef === "Joe"){
@@ -331,7 +329,6 @@ if (day === "Tuesday" && time <= 15 && time > 9) {
     ingredsP.text(TuesdayLunchIngredients);
     instructP.text(TuesdayLunchInstructions[0].steps);
         dish = TuesdayLunchMealChoice; 
-    $("#dishName").text(dish); 
     $(".mealText").html("&nbsp;" + TuesdayLunchTitle);    
     $("#chefName").text("Chef: " + TuesdayLunchChef);
     if (TuesdayLunchChef === "Joe"){
@@ -352,7 +349,6 @@ if (day === "Tuesday" && time > 15) {
     ingredsP.text(TuesdayDinnerIngredients);
     instructP.text(TuesdayDinnerInstructions[0].steps);
         dish = TuesdayDinnerMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + TuesdayDinnerTitle);
     $("#chefName").text("Chef: " + TuesdayDinnerChef);
     if (TuesdayDinnerChef === "Joe"){
@@ -374,7 +370,6 @@ if (day === "Wednesday" && time <= 9) {
     ingredsP.text(WednesdayBreakfastIngredients);
     instructP.text(WednesdayBreakfastInstructions[0].steps);
         dish = WednesdayBreakfastMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + WednesdayBreakfastTitle);
     $("#chefName").text("Chef: " + WednesdayBreakfastChef);
     if (WednesdayBreakfastChef === "Joe"){
@@ -396,7 +391,6 @@ if (day === "Wednesday" && time <= 15 && time > 9) {
     ingredsP.text(WednesdayLunchIngredients);
     instructP.text(WednesdayLunchInstructions[0].steps);
         dish = WednesdayLunchMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + WednesdayLunchTitle);
     $("#chefName").text("Chef: " + WednesdayLunchChef);
     if (WednesdayLunchChef === "Joe"){
@@ -417,7 +411,6 @@ if (day === "Wednesday" && time > 15) {
     ingredsP.text(WednesdayDinnerIngredients);
     instructP.text(WednesdayDinnerInstructions[0].steps);
         dish = WednesdayDinnerMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + WednesdayDinnerTitle);
     $("#chefName").text("Chef: " + WednesdayDinnerChef);
     if (WednesdayDinnerChef === "Joe"){
@@ -438,7 +431,6 @@ if (day === "Thursday" && time <= 9) {
     ingredsP.text(ThursdayBreakfastIngredients);
     instructP.text(ThursdayBreakfastInstructions[0].steps);
         dish = ThursdayBreakfastMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + ThursdayBreakfastTitle);
     $("#chefName").text("Chef: " + ThursdayBreakfastChef);
     if (ThursdayBreakfastChef === "Joe"){
@@ -459,7 +451,6 @@ if (day === "Thursday" && (time <= 15 && time > 9)) {
     ingredsP.text(ThursdayLunchIngredients);
     instructP.text(ThursdayLunchInstructions[0].steps);
         dish = ThursdayLunchMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + ThursdayLunchTitle );
     $("#chefName").text("Chef: " + ThursdayLunchChef);
     if (ThursdayLunchChef === "Joe"){
@@ -480,7 +471,6 @@ if (day === "Thursday" && time > 15) {
     ingredsP.text(ThursdayDinnerIngredients);
     instructP.text(ThursdayDinnerInstructions[0].steps);
         dish = ThursdayDinnerMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + ThursdayDinnerTitle);
     $("#chefName").text("Chef: " + ThursdayDinnerChef);
     if (ThursdayDinnerChef === "Joe"){
@@ -500,7 +490,6 @@ if (day === "Friday" && time <= 9) {
     ingredsP.text(FridayBreakfastIngredients);
     instructP.text(FridayBreakfastInstructions[0].steps);
         dish = FridayBreakfastMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + FridayBreakfastTitle);
     $("#chefName").text("Chef: " + FridayBreakfastChef);
     if (FridayBreakfastChef === "Joe"){
@@ -521,7 +510,6 @@ if (day === "Friday" && time <= 15 && time > 9) {
     ingredsP.text(FridayLunchIngredients);
     instructP.text(FridayLunchInstructions[0].steps);
         dish = FridayLunchMealChoice; 
-    // $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + FridayLunchTitle);
     $("#chefName").text("Chef: " + FridayLunchChef);
     if (FridayLunchChef === "Joe"){
@@ -542,7 +530,6 @@ if (day === "Friday" && time > 15) {
     ingredsP.text(FridayDinnerIngredients);
     instructP.text(FridayDinnerInstructions[0].steps);
         dish = FridayDinnerMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + FridayDinnerTitle);
     $("#chefName").text("Chef: " + FridayDinnerChef);
     if (FridayDinnerChef === "Joe"){
@@ -563,7 +550,6 @@ if (day === "Saturday" && time <= 9) {
     ingredsP.text(SaturdayBreakfastIngredients);
     instructP.text(SaturdayBreakfastInstructions[0].steps);
         dish = SaturdayBreakfastMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SaturdayBreakfastTitle);
     $("#chefName").text("Chef: " + SaturdayBreakfastChef);
     if (SaturdayBreakfastChef === "Joe"){
@@ -584,7 +570,6 @@ if (day === "Saturday" && time <= 15 && time > 9) {
     ingredsP.text(SaturdayLunchIngredients);
     instructP.text(SaturdayLunchInstructions[0].steps);
         dish = SaturdayLunchMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SaturdayLunchTitle);
     $("#chefName").text("Chef: " + SaturdayLunchChef);
     if (SaturdayLunchChef === "Joe"){
@@ -605,7 +590,6 @@ if (day === "Saturday" && time > 15) {
     ingredsP.text(SaturdayDinnerIngredients);
     instructP.text(SaturdayDinnerInstructions[0].steps);
         dish = SaturdayDinnerMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SaturdayDinnerTitle);
     $("#chefName").text("Chef: " + SaturdayDinnerChef);
     if (SaturdayDinnerChef === "Joe"){
@@ -626,7 +610,6 @@ if (day === "Sunday" && time <= 9) {
     ingredsP.text(SundayBreakfastIngredients);
     instructP.text(SundayBreakfastInstructions[0].steps);
         dish = SundayBreakfastMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SundayBreakfastTitle);
     $("#chefName").text("Chef: " + SundayBreakfastChef);
     if (SundayBreakfastChef === "Joe"){
@@ -647,7 +630,6 @@ if (day === "Sunday" && time <= 15 && time > 9) {
     ingredsP.text(SundayLunchIngredients);
     instructP.text(SundayLunchInstructions[0].steps);
         dish = SundayLunchMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SundayLunchTitle);
     $("#chefName").text("Chef: " + SundayLunchChef);
     if (SundayLunchChef === "Joe"){
@@ -668,7 +650,6 @@ if (day === "Sunday" && time > 15) {
     ingredsP.text(SundayDinnerIngredients);
     instructP.text(SundayDinnerInstructions[0].steps);
         dish = SundayDinnerMealChoice; 
-    $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + SundayDinnerTitle);
     $("#chefName").text("Chef: " + SundayDinnerChef);
     if (SundayDinnerChef === "Joe"){
