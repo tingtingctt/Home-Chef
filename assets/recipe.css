@@ -33,7 +33,7 @@ body{
 
 .navbar{
     background-color:hsla(60, 20%, 99%, 0.9);
-    border-radius: 10px;
+    border-radius: 0 0px 10px 10px;
 }
 
 .nav-item.nav-link{
