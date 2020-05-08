@@ -48,6 +48,7 @@ $(document).ready(function() {
   $("#rat").on("click", function(event){
     for (i=0; i<5; i++){
       event.preventDefault();
+      event.stopPropagation();
       // rat.attr("style", "transform: rotate(360deg)");
       rat.animateRotate(2160, 5000);
       rat.animate ({
