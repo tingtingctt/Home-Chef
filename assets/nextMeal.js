@@ -1,12 +1,12 @@
 // var time = 8;
-// var day = "Saturday";
+var day = "Monday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
 var format = "dddd";
 nowDate = d.toLocaleDateString()
 var result = moment(nowDate).format(format);
-var day = result
+// var day = result
 var hourString = moment(d).format("H");
 var time = parseFloat(hourString);
 
@@ -284,6 +284,7 @@ if (day === "Monday" && time <= 15 && time > 9) {
     }
 
 }
+
 if (day === "Monday" && time > 15) {
     ingredsP.text(MondayDinnerIngredients);
     instructP.text(MondayDinnerInstructions[0].steps);
@@ -389,7 +390,7 @@ if (day === "Wednesday" && time <= 9) {
         $(".chef").attr("src", "assets/TT Images/ttchef.png")
     }
 }
-}
+
 
 if (day === "Wednesday" && time <= 15 && time > 9) {
     ingredsP.text(WednesdayLunchIngredients);
@@ -473,7 +474,6 @@ if (day === "Thursday" && (time <= 15 && time > 9)) {
     if (ThursdayLunchChef === "Tingting"){
         $(".chef").attr("src", "assets/TT Images/ttchef.png")
     }
-}
 }
 
 if (day === "Thursday" && time > 15) {

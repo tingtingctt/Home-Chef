@@ -12,13 +12,20 @@ h5, h2 {
     text-align: center;
 }
 
-/* .container {
+.container {
 
-    background-color: pink;
-} */
+    background-color: hsla(60, 20%, 99%, 0.9);
+    border: solid 5px #28a745;
+}
+
+body {
+    background-color: hsla(9, 78%, 55%, 1);
+
+}
 
 .inputGroup {
     padding-top:50px;
+    margin-bottom: 50px;
 }
 
 .navbar{
@@ -53,5 +60,5 @@ h4:hover{
 }
 
 a {
-    color: hsla(0, 50%, 49%, 1);
+    color: #28a745;
 }
