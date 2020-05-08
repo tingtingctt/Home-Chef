@@ -18,21 +18,19 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg" id="navigation">
-        <!-- <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto mr-auto">
-            
-            <a class="nav-item nav-link" href="index.html"><h4>Home</h4></a>
-            <a class="nav-item nav-link" href="recipe.html"><h4>Recipes</h4></a>
-            <a class="nav-item nav-link" href="grocerylist.html"><h4>Grocery List</h4></a>
-          
-          </div>
-        </div>
-      </nav>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav justify-content-center mx-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-auto" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active mx-auto" href="recipe.html">Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-auto" href="grocerylist.html">Grocery</a>
+            </li>
+        </nav>
       <br>
 
     <div class= "container">
@@ -49,7 +47,7 @@
         </div>
 
         <div class="row inputGroup">
-            <div class="col-5">
+            <div class="col-md-5 col-sm-12 col-xs-12">
                 <form>
                     <div class="form-group">
                         <label for="inputMeal">MEAL:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
@@ -66,7 +64,7 @@
                     <button type = "button" class = "btn btn-primary urlBtn" data-toggle="modal" data-target ="optionsModal">Submit</button>
                 </form>
             </div>
-            <div class="col-7">
+            <div class="col-md-7 col-xs-12 col-sm-12">
                 <div class= "row">
                     <div class = "col-12">
                         <h3>Pick a recipe!</h3> 
@@ -82,7 +80,7 @@
 
 
 
-        
+        <!-- This is the modal, will not be seen without button click -->
         <div class="row">
             <div class="col-12">
   
