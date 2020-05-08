@@ -18,10 +18,13 @@ h5, h2 {
     border: solid 5px #28a745;
 }
 
-body {
-    background-color: hsla(9, 78%, 55%, 1);
+body{
+    background-color: rgb(252, 252, 252);
+    background-image: url("TT Images/wood.jpg");
+    background-size: cover;
+ }
 
-}
+
 
 .inputGroup {
     padding-top:50px;
