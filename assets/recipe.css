@@ -68,9 +68,15 @@ h4:hover{
     border-bottom: solid 3px hsla(9, 78%, 55%, 1);
 }
 
-.ingredBtn, .mealBtn, .urlBtn {
-    background-color: hsla(9, 78%, 55%, 1);
+.ingredBtn, .mealBtn, .urlBtn, .btn-save {
+    background-color: hsla(9, 78%, 55%, 1) !important;
     border: none;
+}
+
+.btn-close {
+    border-color: #28a745;
+    background-color: #28a745;
+
 }
 
 .btn:hover{
