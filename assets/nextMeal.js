@@ -1,7 +1,7 @@
 //use these variables to check that it works. Make sure that you comment out the later var day and time on line 13 and 11
 
-// var time = 8;
-// var day = "Monday";
+var time = 8;
+var day = "Sunday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
@@ -14,6 +14,7 @@ var time = parseFloat(hourString);
 
 var dish = ""
 var chef = ""
+
 
     //variables for giphy api
     var MondayBreakfastMealChoice = localStorage.getItem("MondayBreakfastMealChoice");
@@ -246,9 +247,13 @@ var instructP = $("<p>");
 
 //If statements determining what recipe to use corresponding to the day and time
 if (day === "Monday" && time <= 9) {
+    dish = MondayBreakfastMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(MondayBreakfastIngredients);
     instructP.text(MondayBreakfastInstructions[0].steps);
-        dish = MondayBreakfastMealChoice; 
     $(".mealText").html("&nbsp;" + MondayBreakfastTitle);
     $("#chefName").text("Chef: " + MondayBreakfastChef);
     if (MondayBreakfastChef === "Joe"){
@@ -265,9 +270,13 @@ if (day === "Monday" && time <= 9) {
     }
 }
 if (day === "Monday" && time <= 15 && time > 9) {
+    dish = MondayLunchMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(MondayLunchIngredients);
     instructP.text(MondayLunchInstructions[0].steps);
-        dish = MondayLunchMealChoice; 
     $(".mealText").html("&nbsp;" + MondayLunchTitle);
     $("#chefName").text("Chef: " + MondayLunchChef);
     if (MondayLunchChef === "Joe"){
@@ -286,9 +295,13 @@ if (day === "Monday" && time <= 15 && time > 9) {
 }
 
 if (day === "Monday" && time > 15) {
+    dish = MondayDinnerMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(MondayDinnerIngredients);
     instructP.text(MondayDinnerInstructions[0].steps);
-        dish = MondayDinnerMealChoice; 
     $(".mealText").html("&nbsp;" + MondayDinnerTitle);
     $("#chefName").text("Chef: " + MondayDinnerChef);
     if (MondayDinnerChef === "Joe"){
@@ -306,9 +319,13 @@ if (day === "Monday" && time > 15) {
 }
 
 if (day === "Tuesday" && time <= 9) {
+    dish = TuesdayBreakfastMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(TuesdayBreakfastIngredients);
-    instructP.text(TuesdayBreakfastInstructions[0].steps);
-        dish = TuesdayBreakfastMealChoice; 
+    instructP.text(TuesdayBreakfastInstructions[0].steps); 
     $(".mealText").html("&nbsp;" + TuesdayBreakfastTitle);
     $("#chefName").text("Chef: " + TuesdayBreakfastChef);
     if (TuesdayBreakfastChef === "Joe"){
@@ -326,9 +343,13 @@ if (day === "Tuesday" && time <= 9) {
 }
 
 if (day === "Tuesday" && time <= 15 && time > 9) {
+    dish = TuesdayLunchMealChoice;
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(TuesdayLunchIngredients);
     instructP.text(TuesdayLunchInstructions[0].steps);
-        dish = TuesdayLunchMealChoice; 
     $(".mealText").html("&nbsp;" + TuesdayLunchTitle);    
     $("#chefName").text("Chef: " + TuesdayLunchChef);
     if (TuesdayLunchChef === "Joe"){
@@ -346,9 +367,13 @@ if (day === "Tuesday" && time <= 15 && time > 9) {
 }
 
 if (day === "Tuesday" && time > 15) {
+    dish = TuesdayDinnerMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(TuesdayDinnerIngredients);
     instructP.text(TuesdayDinnerInstructions[0].steps);
-        dish = TuesdayDinnerMealChoice; 
     $(".mealText").html("&nbsp;" + TuesdayDinnerTitle);
     $("#chefName").text("Chef: " + TuesdayDinnerChef);
     if (TuesdayDinnerChef === "Joe"){
@@ -367,9 +392,13 @@ if (day === "Tuesday" && time > 15) {
 
 
 if (day === "Wednesday" && time <= 9) {
+    dish = WednesdayBreakfastMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(WednesdayBreakfastIngredients);
     instructP.text(WednesdayBreakfastInstructions[0].steps);
-        dish = WednesdayBreakfastMealChoice; 
     $(".mealText").html("&nbsp;" + WednesdayBreakfastTitle);
     $("#chefName").text("Chef: " + WednesdayBreakfastChef);
     if (WednesdayBreakfastChef === "Joe"){
@@ -388,9 +417,13 @@ if (day === "Wednesday" && time <= 9) {
 
 
 if (day === "Wednesday" && time <= 15 && time > 9) {
+    dish = WednesdayLunchMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(WednesdayLunchIngredients);
     instructP.text(WednesdayLunchInstructions[0].steps);
-        dish = WednesdayLunchMealChoice; 
     $(".mealText").html("&nbsp;" + WednesdayLunchTitle);
     $("#chefName").text("Chef: " + WednesdayLunchChef);
     if (WednesdayLunchChef === "Joe"){
@@ -408,9 +441,13 @@ if (day === "Wednesday" && time <= 15 && time > 9) {
 }
 
 if (day === "Wednesday" && time > 15) {
+    dish = WednesdayDinnerMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(WednesdayDinnerIngredients);
     instructP.text(WednesdayDinnerInstructions[0].steps);
-        dish = WednesdayDinnerMealChoice; 
     $(".mealText").html("&nbsp;" + WednesdayDinnerTitle);
     $("#chefName").text("Chef: " + WednesdayDinnerChef);
     if (WednesdayDinnerChef === "Joe"){
@@ -428,9 +465,13 @@ if (day === "Wednesday" && time > 15) {
 }
 
 if (day === "Thursday" && time <= 9) {
+    dish = ThursdayBreakfastMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(ThursdayBreakfastIngredients);
     instructP.text(ThursdayBreakfastInstructions[0].steps);
-        dish = ThursdayBreakfastMealChoice; 
     $(".mealText").html("&nbsp;" + ThursdayBreakfastTitle);
     $("#chefName").text("Chef: " + ThursdayBreakfastChef);
     if (ThursdayBreakfastChef === "Joe"){
@@ -448,9 +489,13 @@ if (day === "Thursday" && time <= 9) {
 }
 
 if (day === "Thursday" && (time <= 15 && time > 9)) {
+    dish = ThursdayLunchMealChoice;  
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(ThursdayLunchIngredients);
     instructP.text(ThursdayLunchInstructions[0].steps);
-        dish = ThursdayLunchMealChoice; 
     $(".mealText").html("&nbsp;" + ThursdayLunchTitle );
     $("#chefName").text("Chef: " + ThursdayLunchChef);
     if (ThursdayLunchChef === "Joe"){
@@ -468,9 +513,13 @@ if (day === "Thursday" && (time <= 15 && time > 9)) {
 }
 
 if (day === "Thursday" && time > 15) {
+    dish = ThursdayDinnerMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(ThursdayDinnerIngredients);
     instructP.text(ThursdayDinnerInstructions[0].steps);
-        dish = ThursdayDinnerMealChoice; 
     $(".mealText").html("&nbsp;" + ThursdayDinnerTitle);
     $("#chefName").text("Chef: " + ThursdayDinnerChef);
     if (ThursdayDinnerChef === "Joe"){
@@ -486,10 +535,15 @@ if (day === "Thursday" && time > 15) {
         $(".chef").attr("src", "assets/TT Images/ttchef.png")
     }
 }
+
 if (day === "Friday" && time <= 9) {
+    dish = FridayBreakfastMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(FridayBreakfastIngredients);
     instructP.text(FridayBreakfastInstructions[0].steps);
-        dish = FridayBreakfastMealChoice; 
     $(".mealText").html("&nbsp;" + FridayBreakfastTitle);
     $("#chefName").text("Chef: " + FridayBreakfastChef);
     if (FridayBreakfastChef === "Joe"){
@@ -507,9 +561,17 @@ if (day === "Friday" && time <= 9) {
 }
 
 if (day === "Friday" && time <= 15 && time > 9) {
+    dish = FridayLunchMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(FridayLunchIngredients);
     instructP.text(FridayLunchInstructions[0].steps);
         dish = FridayLunchMealChoice; 
+        if (dish === null){
+            $("#dishName").text("Click to change the gif!")
+        }
     $(".mealText").html("&nbsp;" + FridayLunchTitle);
     $("#chefName").text("Chef: " + FridayLunchChef);
     if (FridayLunchChef === "Joe"){
@@ -527,9 +589,13 @@ if (day === "Friday" && time <= 15 && time > 9) {
 }
 
 if (day === "Friday" && time > 15) {
+    dish = FridayDinnerMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(FridayDinnerIngredients);
     instructP.text(FridayDinnerInstructions[0].steps);
-        dish = FridayDinnerMealChoice; 
     $(".mealText").html("&nbsp;" + FridayDinnerTitle);
     $("#chefName").text("Chef: " + FridayDinnerChef);
     if (FridayDinnerChef === "Joe"){
@@ -547,9 +613,13 @@ if (day === "Friday" && time > 15) {
 }
 
 if (day === "Saturday" && time <= 9) {
+    dish = SaturdayBreakfastMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(SaturdayBreakfastIngredients);
     instructP.text(SaturdayBreakfastInstructions[0].steps);
-        dish = SaturdayBreakfastMealChoice; 
     $(".mealText").html("&nbsp;" + SaturdayBreakfastTitle);
     $("#chefName").text("Chef: " + SaturdayBreakfastChef);
     if (SaturdayBreakfastChef === "Joe"){
@@ -567,9 +637,13 @@ if (day === "Saturday" && time <= 9) {
 }
 
 if (day === "Saturday" && time <= 15 && time > 9) {
+    dish = SaturdayLunchMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(SaturdayLunchIngredients);
     instructP.text(SaturdayLunchInstructions[0].steps);
-        dish = SaturdayLunchMealChoice; 
     $(".mealText").html("&nbsp;" + SaturdayLunchTitle);
     $("#chefName").text("Chef: " + SaturdayLunchChef);
     if (SaturdayLunchChef === "Joe"){
@@ -587,9 +661,13 @@ if (day === "Saturday" && time <= 15 && time > 9) {
 }
 
 if (day === "Saturday" && time > 15) {
+    dish = SaturdayDinnerMealChoice;  
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(SaturdayDinnerIngredients);
     instructP.text(SaturdayDinnerInstructions[0].steps);
-        dish = SaturdayDinnerMealChoice; 
     $(".mealText").html("&nbsp;" + SaturdayDinnerTitle);
     $("#chefName").text("Chef: " + SaturdayDinnerChef);
     if (SaturdayDinnerChef === "Joe"){
@@ -607,9 +685,13 @@ if (day === "Saturday" && time > 15) {
 }
 
 if (day === "Sunday" && time <= 9) {
+    dish = SundayBreakfastMealChoice;  
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(SundayBreakfastIngredients);
     instructP.text(SundayBreakfastInstructions[0].steps);
-        dish = SundayBreakfastMealChoice; 
     $(".mealText").html("&nbsp;" + SundayBreakfastTitle);
     $("#chefName").text("Chef: " + SundayBreakfastChef);
     if (SundayBreakfastChef === "Joe"){
@@ -627,9 +709,13 @@ if (day === "Sunday" && time <= 9) {
 }
 
 if (day === "Sunday" && time <= 15 && time > 9) {
+    dish = SundayLunchMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(SundayLunchIngredients);
-    instructP.text(SundayLunchInstructions[0].steps);
-        dish = SundayLunchMealChoice; 
+    instructP.text(SundayLunchInstructions[0].steps); 
     $(".mealText").html("&nbsp;" + SundayLunchTitle);
     $("#chefName").text("Chef: " + SundayLunchChef);
     if (SundayLunchChef === "Joe"){
@@ -647,9 +733,13 @@ if (day === "Sunday" && time <= 15 && time > 9) {
 }
 
 if (day === "Sunday" && time > 15) {
+    dish = SundayDinnerMealChoice; 
+    if (dish === null){
+            
+        $("#dishName").html("");
+    }
     ingredsP.text(SundayDinnerIngredients);
     instructP.text(SundayDinnerInstructions[0].steps);
-        dish = SundayDinnerMealChoice; 
     $(".mealText").html("&nbsp;" + SundayDinnerTitle);
     $("#chefName").text("Chef: " + SundayDinnerChef);
     if (SundayDinnerChef === "Joe"){
