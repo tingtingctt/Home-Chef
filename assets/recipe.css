@@ -33,7 +33,7 @@ body{
 
 .navbar{
     background-color:hsla(60, 20%, 99%, 0.9);
-    border-radius: 0 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .nav-item.nav-link{
@@ -64,4 +64,8 @@ h4:hover{
 
 a {
     color: #28a745;
+}
+
+a:hover {
+    color: hsla(0, 50%, 49%, 1);
 }
