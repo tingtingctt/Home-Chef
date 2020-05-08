@@ -521,7 +521,7 @@ if (day === "Friday" && time <= 15 && time > 9) {
     ingredsP.text(FridayLunchIngredients);
     instructP.text(FridayLunchInstructions[0].steps);
         dish = FridayLunchMealChoice; 
-    $("#dishName").text(dish);
+    // $("#dishName").text(dish);
     $(".mealText").html("&nbsp;" + FridayLunchTitle);
     $("#chefName").text("Chef: " + FridayLunchChef);
     if (FridayLunchChef === "Joe"){
