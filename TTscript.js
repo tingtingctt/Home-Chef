@@ -48,6 +48,8 @@ $(document).ready(function() {
   $("#rat").on("click", function(event){
     for (i=0; i<5; i++){
       event.preventDefault();
+      // rat.attr("style", "transform: rotate(360deg)");
+      rat.animateRotate(2160, 5000);
       rat.animate ({
         top: (Math.random() * 800),
         left:  (Math.random() * 1500),
@@ -81,107 +83,119 @@ $(document).ready(function() {
 
   // ------------------ chef's superpower --------------------
 
-  $(".chef").on("click",function() {
+  $(".chef").on("click",function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    $(".confetti").attr("style", "display:block");
+
     $("#wine").css({height:"10px", left:0, top: '-10px'});
     $("#wine").animate({
-      left: '+=290px',
-      top: '-=340px',
+      left: '+=280px',
+      top: '-=300px',
       width: '60px'
     }, 500)
 
     $("#squid").css({height:"10px", left:0, top: '-10px'});
     $("#squid").animate({
-      left: '+=230px',
-      top: '-=330px',
+      left: '+=210px',
+      top: '-=250px',
       width: '60px'
     }, 500)
 
     $("#milk").css({height:"10px", left:0, top: '-10px'});
     $("#milk").animate({
-      left: '+=170px',
-      top: '-=320px',
+      left: '+=290px',
+      top: '-=200px',
       width: '60px'
     }, 500)
 
     $("#tomato").css({height:"10px", left:0, top: '-10px'});
     $("#tomato").animate({
-      left: '+=110px',
-      top: '-=330px',
+      left: '+=220px',
+      top: '-=150px',
       width: '60px'
     }, 500)
 
     $("#lettuce").css({height:"10px", left:0, top: '-10px'});
     $("#lettuce").animate({
-      left: '+=50px',
-      top: '-=330px',
+      left: '+=290px',
+      top: '-=100px',
       width: '60px'
     }, 500)
 
     $("#eggplant").css({height:"10px", left:0, top: '-10px'});
     $("#eggplant").animate({
-      left: '-=10px',
-      top: '-=330px',
+      left: '+=220px',
+      top: '-=50px',
       width: '60px'
     }, 500)
 
     $("#banana").css({height:"10px", left:0, top: '-10px'});
     $("#banana").animate({
-      left: '-=80px',
-      top: '-=325px',
+      left: '+=290px',
+      top: '-=1px',
       width: '60px'
     }, 500)
   })
 
+  // to close chef superpower
+  $(document).click(function(event){
+    event.preventDefault();
+    $(".confetti").attr("style", "display: none");
+  });
 
 // -------------------- click to change placemat (background image) ----------------------
 
 
   $("#tomato").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("body").attr("style","background-image: url('assets/TT Images/italian.png')")
   });
 
   $("#lettuce").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("body").attr("style","background-image: url('assets/TT Images/embroidery.png')")
   });
 
   $("#milk").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("body").attr("style", "background-image: url('assets/TT Images/color grid 3.png')")
   });
 
   $("#squid").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("body").attr("style","background-image: url('assets/TT Images/kid.jpg')")
   });
 
   $("#banana").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("body").attr("style","background-image: url('assets/TT Images/wood.jpg')")
   });
 
   $("#eggplant").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("body").attr("style","background-image: url('assets/TT Images/marble.png')")
   });
 
   $("#wine").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("body").attr("style","background-image: url('assets/TT Images/bamboo.png')");
   });
 
 
   // ----------- Virtual Garden -------------
 
-  $("#gardenbtn").on("click", function(event){
+  $("#gardenbtndiv").on("click", function(event){
     event.preventDefault();
+    event.stopPropagation();
     $("#whiteout").attr("style", "display: block");
-  }); 
-
-  $("#exit").on("click", function(event){
-    event.preventDefault();
-    $("#whiteout").attr("style", "display: none");
   }); 
 
   $("#weed1").on("click", function(event){
@@ -221,22 +235,35 @@ $(document).ready(function() {
   }); 
 
 
-  // $.fn.animateRotate = function(angle, duration, easing, complete) {
-  //   return this.each(function() {
-  //     var $elem = $(this);
+    // to close virtual garden
+    $(document).click(function(event){
+      event.preventDefault();
+      $("#whiteout").attr("style", "display: none");
+    });
+
+    $("#gardendiv").click(function(event){
+      event.preventDefault();
+      event.stopPropagation();
+    });
+
   
-  //     $({deg: 0}).animate({deg: angle}, {
-  //       duration: duration,
-  //       easing: easing,
-  //       step: function(now) {
-  //         $elem.css({
-  //            transform: 'rotate(' + now + 'deg)'
-  //          });
-  //       },
-  //       complete: complete || $.noop
-  //     });
-  //   });
-  // };
+  // ---------------
+  $.fn.animateRotate = function(angle, duration, easing, complete) {
+    return this.each(function() {
+      var $elem = $(this);
+  
+      $({deg: 0}).animate({deg: angle}, {
+        duration: duration,
+        easing: easing,
+        step: function(now) {
+          $elem.css({
+             transform: 'rotate(' + now + 'deg)'
+           });
+        },
+        complete: complete || $.noop
+      });
+    });
+  };
   
   // $('#gardendiv').animateRotate(90);
 
