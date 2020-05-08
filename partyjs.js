@@ -18,47 +18,8 @@ $(document).ready(function() {
     $(document).on("click", ".delete", function() {
         var $grocerylist = $(this).siblings().children()    
          $grocerylist.parent().parent().remove();
-         
-        
-        
-    
-    
+             
     })
     
 })
-
-/*
-function removeGrocery() {
-    var elem = document.getElementById('groceryinput');
-    elem.parentNode.removeChild(elem);
-    return false;
-}
-
-function deleteGrocery(e) {
-    var id = e.target.id;
-    console.log("delete an item: " + id);
-} 
-
-
-
-function pageInit() {
-    // Hook up the "remove dummy" button
-    /*
-    var grocery = document.getElementById('someString2');
-    if (grocery.addEventListener) {
-        // DOM2 standard
-        grocery.addEventListener('click', removeGrocery, false);
-    }
-    else if (grocery.attachEvent) {
-        // IE (IE9 finally supports the above, though)
-        grocery.attachEvent('onclick', removeGrocery);
-    }
-    else {
-        // Really old or non-standard browser, try DOM0
-        grocery.onclick = removeGrocery;
-    }
-
-
-
-} */
 
