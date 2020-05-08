@@ -12,27 +12,26 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="assets/recipe.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="assets/TT Images/food.jpeg">
 </head>
 
 
 <body>
 
-    <nav class="navbar navbar-expand-lg" id="navigation">
-        <!-- <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto mr-auto">
-            
-            <a class="nav-item nav-link" href="index.html"><h4>Home</h4></a>
-            <a class="nav-item nav-link" href="recipe.html"><h4>Recipes</h4></a>
-            <a class="nav-item nav-link" href="grocerylist.html"><h4>Grocery List</h4></a>
-          
-          </div>
-        </div>
-      </nav>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav justify-content-center mx-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-auto" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active mx-auto" href="recipe.html">Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-auto" href="grocerylist.html">Grocery</a>
+            </li>
+        </nav>
       <br>
 
     <div class= "container">
@@ -40,7 +39,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>ADD A NEW RECIPE:</h1>
-                <h2>Here's how it works.</h2>
+                <h2>Here's how it works:</h2>
                 <h5>Think about what meal you want... meatloaf, spaghetti, etc. etc.? Input that into MEAL!</h5>
                 <h5>When you've chosen your meal from the provided URLs enter it into the form and hit SUBMIT</h5>
                 <h5 id = "borderSection">You'll be prompted to pick your options for when you want to have this recipe - your choices will be saved to the homepage!</h5>
@@ -49,7 +48,7 @@
         </div>
 
         <div class="row inputGroup">
-            <div class="col-5">
+            <div class="col-md-5 col-sm-12 col-xs-12">
                 <form>
                     <div class="form-group">
                         <label for="inputMeal">MEAL:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
@@ -66,7 +65,7 @@
                     <button type = "button" class = "btn btn-primary urlBtn" data-toggle="modal" data-target ="optionsModal">Submit</button>
                 </form>
             </div>
-            <div class="col-7">
+            <div class="col-md-7 col-xs-12 col-sm-12">
                 <div class= "row">
                     <div class = "col-12">
                         <h3>Pick a recipe!</h3> 
@@ -82,7 +81,7 @@
 
 
 
-        
+        <!-- This is the modal, will not be seen without button click -->
         <div class="row">
             <div class="col-12">
   
@@ -129,8 +128,8 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" id = "saveBtn">Save changes</button>
+                                <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary btn-save" id = "saveBtn">Save changes</button>
                             </div>
                         </div>
                      </div>

@@ -285,3 +285,41 @@ h2:hover {
     font-size: 25px;
 }
 
+/* Fonts */
+
+h2 {
+    /* font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script', cursive; */
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    font-family: 'Caveat', cursive;
+}
+
+p {
+    font-family: 'Arima Madurai', cursive;
+}
+
+h3  {
+    font-family: 'Henny Penny', cursive;
+}
+
+button {
+    /* font-family: 'Turret Road', cursive; */
+    font-family: 'Arima Madurai', cursive;
+}
+
+a {
+    /* font-family: 'Turret Road', cursive; */
+    font-family: 'Henny Penny', cursive;
+}
+
+label {
+    font-family: 'Arima Madurai', cursive;
+}
+
+input {
+    font-family: 'Arima Madurai', cursive;
+}
+
+h3.mealText{
+    font-family: 'Caveat', cursive;
+}

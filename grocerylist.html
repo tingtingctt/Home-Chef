@@ -16,40 +16,47 @@
 
 <body>
     
+    <!-- Nav Bar -->
+
     <nav class="navbar navbar-expand-lg" id="navigation">
        
         
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto mr-auto">
+            <div class="navbar-nav ml-auto mr-auto">
             
-            <a class="nav-item nav-link" href="index.html"><h4>Home Page</h4></a>
-            <a class="nav-item nav-link" href="recipe.html"><h4>Recipe Page</h4></a>
-            <a class="nav-item nav-link" href="grocery.html"><h4>Grocery List</h4></a>
-            <a class="nav-item nav-link" href="settings.html"><h4>Settings</h4></a>
-
+                <a class="nav-item nav-link" href="index.html"><h4>Home Page</h4></a>
+                <a class="nav-item nav-link" href="recipe.html"><h4>Recipe Page</h4></a>
+                <a class="nav-item nav-link" href="grocery.html"><h4>Grocery List</h4></a>
+            
             </div>
         </div>
     </nav>
-
-<h1 style='text-align:center'>Grocery List</h1>
-<div id="listContainer" class="container">
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Add your ingredient(s) or needed groceries here!" id="groceryInput" aria-describedby="button-addon2">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" id="submitGrocery">Add My Item!</button>
-    </div>
-</div>
-
-<form  onsubmit="return removeInput-group mb-3(); ">
-    <input type="submit" value="Clear List"/>
-</form>
+    
 <br>
 
+<!-- Grocery Container -->
 
+    <h1 style='text-align:center'>Grocery List</h1>
+        <div id="listContainer" class="container">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Add your ingredient(s) or needed groceries here!" id="groceryInput" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="submitGrocery">Add My Item!</button>
+            </div>
+        </div>
+
+<!-- Clear List Button -->
+
+<form>
+<input type="submit" value="Clear List"/>
+</form>
+
+<br>
 
 <!-- script -->
 
-
 <script src="partyjs.js"></script>
+
+
 </body>
 </html>
