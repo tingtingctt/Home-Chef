@@ -199,18 +199,18 @@ $(document).ready(function() {
     $("#whiteout").attr("style", "display: block");
   }); 
 
-  $("#weed1").on("click", function(event){
+  $("#mushroom3").on("click", function(event){
     event.preventDefault();
-  $("#weed1").animate({
+  $("#mushroom3").animate({
     height: '+=30px',
     top: '-=30px', 
     left: '-=15px', 
   }, 500);
   }); 
 
-  $("#weed2").on("click", function(event){
+  $("#mushroom4").on("click", function(event){
     event.preventDefault();
-  $("#weed2").animate({
+  $("#mushroom4").animate({
     height: '+=30px',
     top: '-=30px',
     left: '-=15px', 
