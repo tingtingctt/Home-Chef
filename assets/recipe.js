@@ -66,21 +66,14 @@ $(".urlBtn").on("click", function(event) {
     }
     
     $.ajax(settings).done(function (response) {
-        console.log(response);
-        console.log(response[0].name);
-        console.log(response[0].ingredients);
-        console.log(response[0].instructions);
 
         recipeTitle = response[0].name
         recipeIngredients = response[0].ingredients
         recipeInstructions = JSON.stringify(response[0].instructions)
 
-        localStorage.setItem("Recipe Title", recipeTitle)
-        // localStorage.setItem("Recipe Ingredients", recipeIngredients)
-        // localStorage.setItem("Recipe Instructions", recipeInstructions)
+        
     });
 
-    //Why doesn't this work
 
     $('#optionsModal').modal({
         show: true
@@ -93,7 +86,7 @@ $(".urlBtn").on("click", function(event) {
 
 
 
-
+//The save changes button in the modal
 $("#saveBtn").on("click", function(event) {
     event.preventDefault();
     var newDay = $("#daySelector").val();
@@ -101,13 +94,9 @@ $("#saveBtn").on("click", function(event) {
     newChef = $("#chefSelector").val();
 
 
-    $("#saveBtn").attr("data-dismiss", "modal")
-
-    localStorage.setItem("Chef for Recipe", newChef)
 
     //If/then statements for modal options
 
-    //they all should say recipe title. The goal is to move this onclick into the submit when I merge the buttons so the var is also there
     if (newDay === "Monday" && newMeal === "Breakfast") {
         localStorage.setItem("MondayBreakfast", recipeTitle);
         localStorage.setItem("MondayBreakfastIngredients", recipeIngredients);
@@ -255,5 +244,7 @@ $("#saveBtn").on("click", function(event) {
         localStorage.setItem("SundayDinnerMealChoice", mealInput)
         localStorage.setItem("SundayDinnerChefChoice", newChef)
     }
+
+    $("#saveBtn").attr("data-dismiss", "modal")
 
 });

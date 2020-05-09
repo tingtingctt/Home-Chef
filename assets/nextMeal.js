@@ -1,7 +1,7 @@
 //use these variables to check that it works. Make sure that you comment out the later var day and time on line 13 and 11
 
-var time = 8;
-var day = "Sunday";
+// var time = 8;
+// var day = "Sunday";
 
 //these lines get the current day and time (in military) from the local computer
 var d = new Date();
@@ -9,9 +9,11 @@ var format = "dddd";
 nowDate = d.toLocaleDateString()
 var result = moment(nowDate).format(format);
 var day = result
+
 var hourString = moment(d).format("H");
 var time = parseFloat(hourString);
 
+//these lines define the variables necessary later
 var dish = ""
 var chef = ""
 
@@ -757,9 +759,11 @@ if (day === "Sunday" && time > 15) {
 }
 ///Ends if statements
 
+
 $(".ingredientsList").html(ingredsP);
 $(".instructionsList").html(instructP)
 
+//This section determines the giphy image using the dish variable defined above. It makes it so that a new gif is picked everytime you click on the image
 var i = 0;   
 function showGif(){
   var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=uvWJQHwlb6r71Lm84qIcFqwpq2o3xdKX&q=" + dish;
