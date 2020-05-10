@@ -52,7 +52,7 @@ index.html JS
 
             - The next lines of code have the onclick events that allow you to change the background by clicking on the theme icons
 
-            - The last sections of code control the applications of the garden: the icon being clickable to bring it up, the mushrooms growing, and removing the garden with an arrow.
+            - The last sections of code control the applications of the garden: the icon being clickable to bring it up, the mushrooms growing, and removing the garden by clicking outside.
 
     -nextMeal.js
         - This script handles the logic and code that takes from local storage to display the current recipe
