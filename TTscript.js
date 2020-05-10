@@ -52,9 +52,11 @@ $(document).ready(function() {
       // rat.attr("style", "transform: rotate(360deg)");
       rat.animateRotate(2160, 5000);
       rat.animate ({
+        height: (Math.random() * 200),
         top: (Math.random() * 800),
         left:  (Math.random() * 1500),
       }, 1000);
+      rat.css({height:"70px"});
     }
   });
 
@@ -248,7 +250,7 @@ $(document).ready(function() {
     });
 
   
-  // ---------------
+  // --------------- rotate avatar --------------------
   $.fn.animateRotate = function(angle, duration, easing, complete) {
     return this.each(function() {
       var $elem = $(this);
