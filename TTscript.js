@@ -48,6 +48,7 @@ $(document).ready(function() {
   $("#rat").on("click", function(event){
     for (i=0; i<5; i++){
       event.preventDefault();
+      event.stopPropagation();
       // rat.attr("style", "transform: rotate(360deg)");
       rat.animateRotate(2160, 5000);
       rat.animate ({
@@ -198,18 +199,18 @@ $(document).ready(function() {
     $("#whiteout").attr("style", "display: block");
   }); 
 
-  $("#weed1").on("click", function(event){
+  $("#mushroom3").on("click", function(event){
     event.preventDefault();
-  $("#weed1").animate({
+  $("#mushroom3").animate({
     height: '+=30px',
     top: '-=30px', 
     left: '-=15px', 
   }, 500);
   }); 
 
-  $("#weed2").on("click", function(event){
+  $("#mushroom4").on("click", function(event){
     event.preventDefault();
-  $("#weed2").animate({
+  $("#mushroom4").animate({
     height: '+=30px',
     top: '-=30px',
     left: '-=15px', 
