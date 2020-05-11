@@ -11,6 +11,13 @@
     height: 134px;  
     width: 104px;
 }
+
+.complete {
+    padding-left: 250px;
+    margin-left: 850px;
+}
+
+
 #someString, #someString2 {
 padding: 2px 5px 25px 5px!important;
 
@@ -22,7 +29,7 @@ height: 24px;
     text-decoration: line-through;
 }
 
-/* Font */
+/* Font and background */
 body{
 background-color: rgb(252, 252, 252);
 background-image: url("assets/TT Images/wood.jpg");
