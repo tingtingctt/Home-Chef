@@ -1,3 +1,5 @@
+Deployed website: https://tingtingctt.github.io/Home-Chef/.
+
 This website is a meal planning organization tool design to keep all of your planning needs in one place.
 
 There are three html pages. 
